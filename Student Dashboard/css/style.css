@@ -59,7 +59,7 @@ nav ul{
   float: right;
   padding: 0;
   height: 80px;
-  margin-right: 40px;
+  margin-right: 50px;
   margin-bottom: 0;
   list-style: none;
   position: relative;
@@ -82,6 +82,7 @@ nav ul li a{
   padding: 40px 15px 0px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
+  font-weight: inherit;
 }
 nav ul li a:hover{
   color: blue;
@@ -117,8 +118,8 @@ nav ul ul li{
   top: 10px;
   left: -20px;
   margin: 0px;
-  width: 180px;
-  font-size: 0.8em;
+  width: 190px;
+  font-size: 0.9em;
   float: none;
   display: list-item;
   border-bottom: 1px solid rgba(0,0,0,0.3);
@@ -135,7 +136,6 @@ nav img.user-profile{
   height: 40px;
   width: 40px;
 }
-
 
 
   h2, h4{
