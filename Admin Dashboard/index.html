@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="assets/js/script.js"></script>
     <title> BUCEILS Voting System </title>
 </head>
 
@@ -73,17 +74,17 @@
             <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">MESSAGES</a></li>
             <!-- <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">LOGOUT</a></li> -->
             <li>
-				<a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
-				<ul>
-					<li><a href="#">Admin</a></li>
-					<li><a href="#">LOGOUT</a></li>
-				</ul>
-			</li>
-
+                <a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
+                <ul>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">LOGOUT</a></li>
+                </ul>
+            </li>
         </ul>
+        <!--end of list-->
     </nav>
-
     <section>
+        <!--Left Content-->
         <article>
             <p>WELCOME TO THE OFFICIAL</p>
             <h1>ONLINE VOTING SYSTEM</h1>
@@ -91,6 +92,18 @@
                 INTEGRATED LABORATORY SCHOOL-HIGH SCHOOL DEPT.</p>
         </article>
     </section>
+
+    <div class="container">
+        <h1 id="headline">ELECTION COUNTDOWN</h1>
+        <div id="countdown">
+            <ul>
+                <li><span id="days">0</span>days</li>
+                <li><span id="hours">0</span>Hours</li>
+                <li><span id="minutes">0</span>Minutes</li>
+                <li><span id="seconds">0</span>Seconds</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="footer">
         <p>BS COMPUTER SCIENCE 3A © 2021</p>
@@ -101,6 +114,7 @@
             $('span').toggleClass("cancel");
         });
     </script>
+
 </body>
 
 </html>

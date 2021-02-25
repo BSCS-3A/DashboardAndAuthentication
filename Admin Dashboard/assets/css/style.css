@@ -293,7 +293,6 @@ article {
   text-align: center;
   color: #ffffff;
 }
-
 .footer p{
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 6px;
@@ -303,4 +302,35 @@ nav img.user-profile{
   margin-top: 0;
   height: 40px;
   width: 40px;
+}
+/*countdown*/
+.container {
+  color: #333;
+  float: right;
+  text-align: center;
+  margin-right: 10px;
+  top: -250px;
+  bottom: 0;
+  position: relative;
+  max-width: 600px;
+}
+div h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+div li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+div li span {
+  display: block;
+  font-size: 4.5rem;
+}
+#content {
+  display: none;
+  padding: 1rem;
 }
