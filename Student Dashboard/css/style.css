@@ -26,7 +26,7 @@ nav:after{
 
 .logo-pic{
           float: left;
-          margin-top: 15px;
+          margin-top: 5px;
           margin-left: 15px;
           width: 60px;
           height: 60px;
@@ -66,22 +66,20 @@ nav ul li{
   margin: 10px 30px;
 }
 nav ul li a{
-  color: #3b505d;
+  color: black;
   line-height: 70px;
   text-decoration: none;
   font-size: 20px;
   padding: 33px 31px;
 }
-nav ul li a:hover{
-  border-radius: 3px;
-  box-shadow:  inset 0 0 10px rgba(0,0,0,0.2);
+nav a.topnav:hover{
+  background-color: #ffc423; 
 }
+
 nav ul ul li:hover{
   background-color: #142d4f;
 }
-nav ul ul li a:hover{
-  box-shadow: none;
-}
+
 nav ul ul{
   position: absolute;  
   top: 50px;
@@ -98,7 +96,7 @@ nav ul li:hover > ul{
 nav ul ul li{
   background-color: #1f6f8f;
   position: relative;
-  left: -55px;
+  left: -45px;
   bottom: -22px;
   margin: 0px;
   width: 250px;
@@ -112,16 +110,18 @@ nav ul ul li a{
   line-height: 50px;
 }
 
-.dropbtn {
-  cursor: pointer;
-}
+
 
 .dropdown, img {
   float: left;
-  margin-top: 10px;
+  padding: 10px 5px;
   height: 50px;
   width: 50px;
   position: relative;
+}
+
+.dropbtn{
+  background-color: none;
 }
 
 .dropdown-content {
@@ -130,10 +130,9 @@ nav ul ul li a{
   position: absolute;
   text-align: center;
   left: -60px;
-  margin-top: 15px;
+  margin-top: 5px;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
 .dropdown-content a {
@@ -158,19 +157,7 @@ nav ul ul li a{
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  transition:height 0.4s ease-in-out 0s;
-    -moz-transition:height 0.4s ease-in-out 0s;
-    -webkit-transition:height 0.4s ease-in-out 0s;
-    -o-transition:height 0.4s ease-in-out 0s
-}
-
-.welcome-banner{
-  float: left;
-  margin-left: 40px;
-  margin-top: 200px;
-}
-h2, h4{
+  h2, h4{
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
   color: #142d4f;
@@ -186,13 +173,24 @@ h3{
 }
 
 .countdown-container{
-  text-align: center;
   float: right;
+  margin-right: 50px;
+  top: -250px;
+  bottom: 0;
+  text-align: center;
   position: relative;
   max-width: 450px;
-  margin-top: 100px;
-  margin-right: 150px;
 }
+
+.countdown-box{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 15px 40px;
+  border-style: solid;
+  border-color: #ffc423;
+  padding: 15px 30px;
+}
+
 h5, h6{
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
@@ -205,28 +203,155 @@ h6{
   font-size: 15px;
 }
 
-.countdown-box{
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 15px 40px;
-  border-style: solid;
-  border-color: #ffc423;
-  padding: 15px 30px;
+
+
+
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color:#ffc423;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+.content{
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  font-size: 30px;
+  font-weight: 500;
+  font-family: Generica regular, sans-serif;
 }
 
+article p{
+  font-family: Roboto regular, sans-serif;
+  color: #142d4f;
+  font-weight: inherit;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+article h1{
+  font-family: Generica regular, sans-serif;
+  color: #1f6f8f;
+  font-weight: inherit;
+  font-size: 55px;
+  position: relative;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+  margin-right: 0;
+  margin-left: 30px;
+  margin-top: 190px;
+  max-width: 700px;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  padding: 10px;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  body, section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
 
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 2%;
   background-color: #ffc423;
-  color: #000000;
   text-align: center;
+  color: #ffffff;
 }
 
-div.footer p{
-    font-family: Roboto Regular, sans-serif;
-    font-weight: inherit;
-    font-size: 15px;
+.footer p{
+  font-family: Roboto Regular, sans-serif;
+  color: black;
+  letter-spacing: 6px;
+  font-size: 0.8em;
 }
