@@ -17,8 +17,7 @@ nav{
   background: #1d6986;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
               0 3px 6px rgba(0, 0, 0, .23);
-  height: 80px;
-  /* position: relative;   */
+
 }
 nav:after{
   content: '';
@@ -64,6 +63,7 @@ nav .logo-pic{
 nav ul{
   float: right;
   padding: 0;
+  height: 80px;
   margin-right: 40px;
   margin-bottom: 0;
   list-style: none;
@@ -73,10 +73,10 @@ nav ul{
 nav ul li{
   float: left;
   display: inline-block;
+  height: 80px;
   background: #1d6986;
   text-align: center;
   /* margin: 0 5px; */
-  /* margin-right: 20px; */
   width: 140px;
 }
 nav ul li a{
@@ -103,6 +103,9 @@ nav ul ul{
   opacity: 0;
   visibility: hidden;
   transition: top .3s;
+}
+nav ul ul li{
+ height: 50px;
 }
 nav ul ul li a{
   color:rgb(0, 0, 0);
