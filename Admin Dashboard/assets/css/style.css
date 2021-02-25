@@ -299,3 +299,8 @@ article {
   letter-spacing: 6px;
   font-size: 0.8em;
 }
+nav img.user-profile{
+  margin-top: 0;
+  height: 40px;
+  width: 40px;
+}
