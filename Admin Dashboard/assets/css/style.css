@@ -13,7 +13,7 @@ body{
 }
 
 nav{
-  background: #1b1b1b;
+  background: #ffffff;
   /* min-height: 90px;   */
 }
 
@@ -23,19 +23,21 @@ nav:after{
   display: table;
 }
 nav h2{
-  font-family: Roboto bold, sans-serif;
+  font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
-  font-size: 18px;
+  font-size: 120%;
   margin-bottom: 0px;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
+  color: #1b1b1b;
 }
 nav h3{
   margin-top: 0px;
+  color: #1b1b1b;
   padding-top: 5px;
   font-weight: inherit;
-  font-size: 18px;
+  font-size: 140%;
   margin-bottom: 0px;
-  letter-spacing: 3px;
+  letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
 
@@ -66,21 +68,23 @@ nav ul{
 nav ul li{
   float: left;
   display: inline-block;
-  background: #1b1b1b;
+  background: #ffffff;
   margin: 0 5px;
 }
 nav ul li a{
-  color: white;
+  color: rgb(0, 0, 0);
   line-height: 70px;
   text-decoration: none;
   font-size: 18px;
   padding: 8px 15px;
+  font-family: Roboto Light, sans-serif;
 }
 nav ul li a:hover{
-  color: cyan;
-  border-radius: 5px;
-  box-shadow:  0 0 5px #33ffff,
-               0 0 10px #66ffff;
+  color: rgb(217, 255, 0);
+  /* border-radius: 10px; */
+  text-decoration: none;
+  /* box-shadow:  0 0 5px #ffffff,
+               0 0 10px #414141; */
 }
 nav ul ul li a:hover{
   box-shadow: none;
