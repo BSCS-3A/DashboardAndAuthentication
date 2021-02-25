@@ -67,12 +67,14 @@ nav ul{
   margin-right: 40px;
   list-style: none;
   position: relative;
+  text-align: center;
 }
 nav ul li{
   float: left;
   display: inline-block;
   background: #ffffff;
-  margin: 0 5px;
+  /* margin: 0 5px; */
+  margin-right: 20px;
 }
 nav ul li a{
   color: rgb(0, 0, 0);
@@ -91,10 +93,6 @@ nav ul li a:hover{
 nav ul li:hover{
   background-color: #124254;
 }
-nav ul ul li a:hover{
-  color: #1b1b1b;
-  box-shadow: none;
-}
 nav ul ul{
   position: absolute;
   top: 90px;
@@ -105,6 +103,10 @@ nav ul ul{
 }
 nav ul ul li:hover{
   background-color: #e0a900;
+}
+nav ul ul li a:hover{
+  color: #1b1b1b;
+  box-shadow: none;
 }
 nav ul ul ul{
   border-top: none;
