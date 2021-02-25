@@ -313,6 +313,7 @@ nav img.user-profile{
   bottom: 0;
   position: relative;
   max-width: 600px;
+  display: flexbox;
 }
 div h1 {
   font-weight: normal;
@@ -331,6 +332,6 @@ div li span {
   font-size: 4.5rem;
 }
 #content {
-  display: none;
+  display: flex;
   padding: 1rem;
 }
