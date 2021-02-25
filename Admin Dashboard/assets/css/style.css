@@ -10,6 +10,7 @@ body{
   font-family: Roboto,Roboto Thin,Generica, sans-serif;  
   background-image: url("../img/BUCEILS-BUILDING-BLUE.png");
   background-size: cover;
+  font-size: 100%;
 }
 
 nav{
@@ -45,7 +46,6 @@ nav h3{
 
 nav .logo{
   float: left;
-  color: white;
   font-weight: 600;
   line-height: 70px;
   padding-left: 20px;
@@ -79,17 +79,19 @@ nav ul li a{
   line-height: 70px;
   text-decoration: none;
   font-size: 1.4em;
-  padding: 8px 15px;
+  padding: 40px 15px;
+  letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
 }
 nav ul li a:hover{
-  background: #124254;
   color: #ffc423;
   text-decoration: none;
-  box-shadow:  inset 0 0 10px rgba(0,0,0,0.2);
+  /* box-shadow:  inset 0 0 10px rgba(0,0,0,0.2); */
+}
+nav ul li:hover{
+  background-color: #124254;
 }
 nav ul ul li a:hover{
-  background: #e0a900;
   color: #1b1b1b;
   box-shadow: none;
 }
@@ -100,6 +102,9 @@ nav ul ul{
   opacity: 0;
   visibility: hidden;
   transition: top .3s;
+}
+nav ul ul li:hover{
+  background-color: #e0a900;
 }
 nav ul ul ul{
   border-top: none;
