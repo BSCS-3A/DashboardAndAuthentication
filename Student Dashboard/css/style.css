@@ -230,29 +230,21 @@ nav img.user-profile{
   position: relative;
   text-align: center;
   display: -webkit-flex;
-  display: flex;
+  display: flexbox;
   margin-left: 0px;
   margin-top: 250px;
   max-width: 600px;
   }
   div h1 {
-  font-weight: normal;
-  letter-spacing: .125rem;
-  text-transform: uppercase;
+  
   }
   div li.cd {
-  position: relative;
-  font-size: 0.5em;
-  list-style-type: none;
-  padding: .5em;
-  text-transform: uppercase;
+  
   }
   div li.cd span.cdspan {
-  width: 25%;
-  display: block;
-  font-size: 1.5rem;
+  
   }
-  #countdown {
+  #countdown{
   top: 500px;
   padding: 1rem;
   }
@@ -290,34 +282,6 @@ section.welcome-banner{
   margin-left: 30px;
   margin-top: 190px;
   max-width: 700px;
-}
-
-section.cd-container{
-  z-index: -1;
-  top: -250px;
-  left: 730px;
-  position: relative;
-  text-align: center;
-  display: -webkit-flex;
-  display: flex;
-  max-width: 600px;
-}
-article.cd-text p{
-  font-family: Roboto regular, sans-serif;
-  color: black;
-  font-weight: inherit;
-  font-size: 0.7em;
-  position: relative;
-  margin-top: 200px;
-}
-
-article.cd-text h1{
-  font-family: Roboto Regular, sans-serif;
-  color: #1f6f8f;
-  font-weight: inherit;
-  font-size: 2.0em;
-  position: relative;
-  letter-spacing: 1px;
 }
 
 
