@@ -235,10 +235,27 @@ nav img.user-profile{
   margin-top: 250px;
   max-width: 600px;
   }
-  #content {
+  div h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  }
+  div li.cd {
+  position: relative;
+  font-size: 0.5em;
+  list-style-type: none;
+  padding: .5em;
+  text-transform: uppercase;
+  }
+  div li.cd span.cdspan {
+  width: 25%;
+  display: block;
+  font-size: 1.5rem;
+  }
+  #countdown {
   top: 500px;
   padding: 1rem;
-}
+  }
 }
 /**END OF RESP**/
 
