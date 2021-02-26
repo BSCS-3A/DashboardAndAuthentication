@@ -2,6 +2,10 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <link rel="icon" href="../img/buceils-logo.png" type="image/png"> 
 	<title>BUCEILS Student Dashboard</title>
@@ -10,8 +14,11 @@
 	<nav>
 		<img class="logo-pic" src="../img/buceils-logo.png">
 		<div class="logo"><h1>B U C E I L S</h1><p>ONLINE VOTING SYSTEM</p></div>
+		<label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+		<input type="checkbox" id="btn">
 		<ul>
 			<li>
+				<label for="btn-2" class="show">VOTE</label>
 				<a class="topnav" href="#">VOTE</a>
 				<ul>
 					<li><a href="#">VOTE NOW</a></li>
@@ -19,6 +26,7 @@
 				</ul>
 			</li>
 			<li>
+				<label for="btn-2" class="show">ABOUT</label>
 				<a class="topnav" href="#">ABOUT</a>
 				<ul>
 					<li><a href="#">ELECTION PROCESS</a></li>
@@ -26,14 +34,18 @@
 				</ul>
 			</li>
 			<li>
+				<label for="btn-2" class="show">CANDIDATES</label>
 				<a class="topnav" href="#">CANDIDATES</a>
 				<ul>
 					<li><a href="#">VIEW INFO</a></li>
 				</ul>
 			</li>
-			<li><a class="topnav" href="#">CHAT US</a>
+			<li>
+				<label for="btn-2" class="show">CHAT US</label>
+				<a class="topnav" href="#">CHAT US</a>
 			</li>
 			<li>
+				<label for="btn-2" class="show">JUAN S. DELA CRUZ</label>
 				<a class="user" href="#"><img class="user-profile" src="../img/user.png"></a>
 				<ul>
 					<li><a href="#">JUAN S. DELA CRUZ</a></li>
@@ -42,21 +54,23 @@
 			</li>
 		</ul>
 	</nav>
-	<section>
-        <article>
+	<section class="welcome-banner">
+        <article class="welcome-text">
             <p>WELCOME TO THE OFFICIAL</p>
             <h1>ONLINE VOTING SYSTEM</h1>
             <p>BICOL UNIVERSITY COLLEGE OF EDUCATION<br>
                 INTEGRATED LABORATORY SCHOOL-HIGH SCHOOL DEPT.</p>
         </article>
     </section>
-    <div class="countdown-container">
-    	<h5>ELECTION COUNTDOWN</h5>
-    		<div class="countdown-box">
-      			THIS IS WHERE THE COUNTDOWN CLOCK IS
-    		</div>
-    			<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt arcu. Sed ullamcorper nibh a metus molestie rutrum. Duis nec dolor ut ipsum feugiat commodo gravida a nisi. Phasellus finibus augue odio, vel consequat nibh ultricies vel. Nulla ullamcorper, est eget suscipit vehicula, enim lectus scelerisque massa, vitae semper sapien magna consequat sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin semper, arcu in tincidunt cursus, enim lorem tincidunt lacus, a elementum leo nisl quis ipsum. Cras consequat quam arcu.</h6>
-  	</div>
+    <section class="countdown-container">
+    	<article class="countdown">
+    		<h5>ELECTION COUNTDOWN</h5>
+    			<div class="countdown-box">
+      				THIS IS WHERE THE COUNTDOWN CLOCK IS
+    			</div>
+    				<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget tincidunt arcu. Sed ullamcorper nibh a metus molestie rutrum. Duis nec dolor ut ipsum feugiat commodo gravida a nisi. Phasellus finibus augue odio, vel consequat nibh ultricies vel. Nulla ullamcorper, est eget suscipit vehicula, enim lectus scelerisque massa, vitae semper sapien magna consequat sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin semper, arcu in tincidunt cursus, enim lorem tincidunt lacus, a elementum leo nisl quis ipsum. Cras consequat quam arcu.</h6>
+    	</article>
+  	</section>
 	
 	<div class="footer">
   		<p>BS COMPUTER SCIENCE 3A © 2021</p>
