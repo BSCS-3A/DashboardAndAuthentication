@@ -15,7 +15,6 @@ body{
 
 nav{
   background: #f8f8f8;
-  width: 100%;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
               0 3px 6px rgba(0, 0, 0, .23);
 }
@@ -43,14 +42,14 @@ nav .logo-pic{
  nav h1{
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
-  font-size: 20px;
+  font-size: 1.3em;
   margin-bottom: 0px;
  }
 
  nav p{
   font-family: Generica Regular, sans-serif;
   font-weight: inherit;
-  font-size: 30px;
+  font-size: 1.8em;
   margin-top: 0px;
  }
 
@@ -85,7 +84,6 @@ nav ul li a{
   font-weight: inherit;
 }
 nav ul li a:hover{
-  color: blue;
   text-decoration: none;
   /* box-shadow:  inset 0 0 10px rgba(0,0,0,0.2); */
 }
@@ -97,8 +95,7 @@ nav ul ul li:hover{
   background-color: #142d4f;
 }
 nav ul ul li a:hover{
-  color: white;
-  box-shadow: none;
+  color:rgb(0, 0, 0);
 }
 nav ul ul{
   position: absolute;
@@ -136,55 +133,9 @@ nav img.user-profile{
   height: 40px;
   width: 40px;
 }
-
-
-  h2, h4{
-  font-family: Roboto Regular, sans-serif;
-  font-weight: inherit;
-  color: #142d4f;
+.show,.icon,input{
+  display: none;
 }
-h4{
-  font-size: 25px;
-}
-h3{
-  font-family: Generica Regular, sans-serif;
-  font-weight: inherit;
-  font-size: 55px;
-  color: #1f6f8f;
-}
-
-.countdown-container{
-  float: right;
-  margin-right: 100px;
-  top: -250px;
-  bottom: 0;
-  text-align: center;
-  position: relative;
-  max-width: 450px;
-}
-
-.countdown-box{
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 15px 40px;
-  border-style: solid;
-  border-color: #ffc423;
-  padding: 15px 30px;
-}
-
-h5, h6{
-  font-family: Roboto Regular, sans-serif;
-  font-weight: inherit;
-}
-h5{
-  font-size: 40px;
-}
-h6{
-  margin-top: 100px;
-  font-size: 15px;
-}
-
-
 
 
 @media all and (max-width: 968px) {
@@ -192,14 +143,33 @@ h6{
     margin-right: 0px;
     float: left;
   }
-  nav .logo{
-    padding-left: 30px;
+  nav .logo .logo-pic{
+    float: left;
+    padding-left: 10px;
     width: 100%;
   }
+  nav .logo-pic{
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  nav h1{
+  margin-top: 10px;
+  font-family: Roboto Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 0.8em;
+  margin-bottom: 0px;
+  }
+
+ nav p{
+  font-family: Generica Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 1.1em;
+ }
   .show + a, ul{
     display: none;
   }
   nav ul li,nav ul ul li{
+    left: 0;
     display: block;
     width: 100%;
   }
@@ -208,18 +178,19 @@ h6{
   }
   .show{
     display: block;
-    color: #ffffff;
+    background: #18566e;
+    color: white;
     font-size: 18px;
     padding: 0 20px;
     line-height: 70px;
     cursor: pointer;
   }
   .show:hover{
-    color: cyan;
+    color: black;
   }
   .icon{
     display: block;
-    color:#ffc423;
+    color: black;
     position: absolute;
     top: 0;
     right: 40px;
@@ -255,26 +226,12 @@ h6{
     content: '\f00d';
   }
 }
-.content{
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-  font-family: Generica regular, sans-serif;
-}
+/**END OF RESP**/
 
-article p{
+
+
+
+article.welcome-text p{
   font-family: Roboto regular, sans-serif;
   color: #142d4f;
   font-weight: inherit;
@@ -283,7 +240,7 @@ article p{
   position: relative;
 }
 
-article h1{
+article.welcome-text h1{
   font-family: Generica regular, sans-serif;
   color: #1f6f8f;
   font-weight: inherit;
@@ -292,16 +249,46 @@ article h1{
   letter-spacing: 3px;
   margin-top: 10px;
 }
-
 /* Container for flexboxes */
-section {
+section.welcome-banner{
+  z-index: -1;
+  position: relative;
+  text-align: left;
   display: -webkit-flex;
   display: flex;
-  margin-right: 0;
   margin-left: 30px;
   margin-top: 190px;
   max-width: 700px;
 }
+
+section.cd-container{
+  z-index: -1;
+  top: -250px;
+  left: 730px;
+  position: relative;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  max-width: 600px;
+}
+article.cd-text p{
+  font-family: Roboto regular, sans-serif;
+  color: black;
+  font-weight: inherit;
+  font-size: 0.7em;
+  position: relative;
+  margin-top: 200px;
+}
+
+article.cd-text h1{
+  font-family: Roboto Regular, sans-serif;
+  color: #1f6f8f;
+  font-weight: inherit;
+  font-size: 2.0em;
+  position: relative;
+  letter-spacing: 1px;
+}
+
 
 /* Style the content */
 article {
