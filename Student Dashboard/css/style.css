@@ -225,6 +225,20 @@ nav img.user-profile{
   span.cancel:before{
     content: '\f00d';
   }
+  .container {
+  z-index: -1;
+  position: relative;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 0px;
+  margin-top: 250px;
+  max-width: 600px;
+  }
+  #content {
+  top: 500px;
+  padding: 1rem;
+}
 }
 /**END OF RESP**/
 
@@ -322,4 +336,37 @@ article {
   color: black;
   letter-spacing: 6px;
   font-size: 0.8em;
+}
+
+/*countdown*/
+.container {
+  color: #333;
+  float: right;
+  text-align: center;
+  margin-right: 50px;
+  top: -200px;
+  bottom: 0;
+  position: relative;
+  max-width: 600px;
+  display: flexbox;
+}
+div h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+div li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+div li span {
+  display: block;
+  font-size: 3.5rem;
+}
+#content {
+  display: flex;
+  padding: 1rem;
 }
