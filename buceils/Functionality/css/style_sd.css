@@ -1,0 +1,353 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+    font-family: Roboto, Generica, sans-serif;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+nav{
+  background: #f8f8f8;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
+              0 3px 6px rgba(0, 0, 0, .23);
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+
+nav .logo-pic{
+          float: left;
+          margin-top: 10px;
+          margin-left: 15px;
+          width: 60px;
+          height: 60px;
+ }
+
+ nav .logo{
+      float: left; 
+      position: relative;
+      margin-top: 10px;
+      margin-left: 8px;
+ }
+
+ nav h1{
+  font-family: Roboto Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 1.3em;
+  margin-bottom: 0px;
+ }
+
+ nav p{
+  font-family: Generica Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 1.8em;
+  margin-top: 0px;
+ }
+
+
+nav ul{
+  float: right;
+  padding: 0;
+  height: 80px;
+  margin-right: 50px;
+  margin-bottom: 0;
+  list-style: none;
+  position: relative;
+  text-align: center;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  height: 80px;
+  background: #f8f8f8;
+  text-align: center;
+  /* margin: 0 5px; */
+  width: 140px
+}
+nav ul li a{
+  color: black;
+  line-height: 80px;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 40px 15px 0px 15px;
+  letter-spacing: 1px;
+  font-family: Roboto Light, sans-serif;
+  font-weight: inherit;
+}
+nav ul li a:hover{
+  text-decoration: none;
+  /* box-shadow:  inset 0 0 10px rgba(0,0,0,0.2); */
+}
+nav ul li:hover{
+  background-color: #fece4b;
+}
+
+nav ul ul li:hover{
+  background-color: #142d4f;
+}
+nav ul ul li a:hover{
+  color:rgb(0, 0, 0);
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  background: #18566e;
+  position: relative;
+  top: 10px;
+  left: -20px;
+  margin: 0px;
+  width: 190px;
+  font-size: 0.9em;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  height: 50px;
+}
+nav ul ul li a{
+  font-size: 0.9em;
+  color:white;
+  line-height: 50px;
+  font-family: Roboto bold, sans-serif;
+}
+nav img.user-profile{
+  margin-top: 20px;
+  height: 40px;
+  width: 40px;
+}
+.show,.icon,input{
+  display: none;
+}
+
+
+@media all and (max-width: 968px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo .logo-pic{
+    float: left;
+    padding-left: 10px;
+    width: 100%;
+  }
+  nav .logo-pic{
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  nav h1{
+  margin-top: 10px;
+  font-family: Roboto Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 0.8em;
+  margin-bottom: 0px;
+  }
+
+ nav p{
+  font-family: Generica Regular, sans-serif;
+  font-weight: inherit;
+  font-size: 1.1em;
+ }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    left: 0;
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    background: #18566e;
+    color: white;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: black;
+  }
+  .icon{
+    display: block;
+    color: black;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  .container {
+  z-index: -1;
+  position: relative;
+  text-align: center;
+  display: -webkit-flex;
+  display: flexbox;
+  margin-left: 0px;
+  margin-top: 250px;
+  max-width: 600px;
+  }
+  div h1 {
+  
+  }
+  div li.cd {
+  
+  }
+  div li.cd span.cdspan {
+  
+  }
+  #countdown{
+  top: 500px;
+  padding: 1rem;
+  }
+}
+/**END OF RESP**/
+
+
+
+
+article.welcome-text p{
+  font-family: Roboto regular, sans-serif;
+  color: #142d4f;
+  font-weight: inherit;
+  font-size: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+article.welcome-text h1{
+  font-family: Generica regular, sans-serif;
+  color: #1f6f8f;
+  font-weight: inherit;
+  font-size: 55px;
+  position: relative;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+/* Container for flexboxes */
+section.welcome-banner{
+  z-index: -1;
+  position: relative;
+  text-align: left;
+  display: -webkit-flex;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 190px;
+  max-width: 700px;
+}
+
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  padding: 10px;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  body, section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2%;
+  background-color: #ffc423;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer p{
+  font-family: Roboto Regular, sans-serif;
+  color: black;
+  letter-spacing: 6px;
+  font-size: 0.8em;
+}
+
+/*countdown*/
+.container {
+  color: #333;
+  float: right;
+  text-align: center;
+  margin-right: 50px;
+  top: -200px;
+  bottom: 0;
+  position: relative;
+  max-width: 600px;
+  display: flexbox;
+}
+div h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+div li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+div li span {
+  display: block;
+  font-size: 3.5rem;
+}
+#content {
+  display: flex;
+  padding: 1rem;
+}
