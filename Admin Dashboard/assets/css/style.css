@@ -11,6 +11,8 @@ body{
   background-image: url("../img/BUCEILS-BUILDING-BLUE.png");
   background-size: cover;
   font-size: 100%;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 nav{
@@ -106,6 +108,11 @@ nav ul ul{
 }
 nav ul ul li{
  height: 50px;
+}
+nav ul ul li .logout::before {
+  content: "\f2f5";
+  font-family: "Font Awesome 5 Free";
+  padding: 0 10px 0 0;
 }
 nav ul ul li a{
   color:rgb(0, 0, 0);
