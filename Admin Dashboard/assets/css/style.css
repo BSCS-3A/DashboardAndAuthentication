@@ -301,12 +301,12 @@ article {
   background-color: #124254;
   color: white;
   text-align: center;
-  color: #ffffff;
 }
 .footer p{
   font-family: Roboto Regular, sans-serif;
-  letter-spacing: 6px;
-  font-size: 0.8em;
+  letter-spacing: 7px;
+  font-size: 1em;
+  width: auto;
 }
 nav img.user-profile{
   margin-top: 0;
@@ -331,6 +331,7 @@ div h1 {
   text-transform: uppercase;
   font-size: 4em;
   color: black;
+  margin-bottom: .8em;
 }
 div ul{
   /* max-width: 90%; */
@@ -356,4 +357,10 @@ div li span {
   display: flex;
   padding: 1rem;
   position: relative;
+}
+div p{
+  font-family: Roboto Regular, sans-serif;
+  text-align: justify;
+  font-size: 1.6em;
+  margin-top: 3em;
 }
