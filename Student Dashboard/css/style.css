@@ -225,28 +225,18 @@ nav img.user-profile{
   span.cancel:before{
     content: '\f00d';
   }
-  .container {
+  div.container {
   z-index: -1;
   position: relative;
   text-align: center;
-  display: -webkit-flex;
+  right: 50px;
   display: flexbox;
   margin-left: 0px;
-  margin-top: 250px;
+  margin-top: 350px;
   max-width: 600px;
   }
   div h1 {
-  
-  }
-  div li.cd {
-  
-  }
-  div li.cd span.cdspan {
-  
-  }
-  #countdown{
-  top: 500px;
-  padding: 1rem;
+  align-content: center;
   }
 }
 /**END OF RESP**/
@@ -301,7 +291,7 @@ article {
   }
 }
 
-.footer {
+  .footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -310,7 +300,7 @@ article {
   background-color: #ffc423;
   text-align: center;
   color: #ffffff;
-}
+  }
 
 .footer p{
   font-family: Roboto Regular, sans-serif;
@@ -320,34 +310,44 @@ article {
 }
 
 /*countdown*/
-.container {
+  .container {
+  z-index: -1;
   color: #333;
   float: right;
   text-align: center;
-  margin-right: 50px;
-  top: -200px;
+  margin-right: 70px;
+  top: -300px;
   bottom: 0;
   position: relative;
   max-width: 600px;
   display: flexbox;
-}
-div h1 {
+  }
+
+  div h1.headline {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
+  }
+  div ul{
+  /* max-width: 90%; */
+  border: 1px solid #ffc423;
+  border-width: 3px;
+  text-align: center;
+  padding: 0;
 }
-div li {
+
+  div li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.3em;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
-}
-div li span {
+  }
+  div li span {
   display: block;
   font-size: 3.5rem;
-}
-#content {
+  }
+  #content {
   display: flex;
   padding: 1rem;
-}
+  }
