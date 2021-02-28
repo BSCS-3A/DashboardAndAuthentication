@@ -315,7 +315,7 @@ article {
   color: #333;
   float: right;
   text-align: center;
-  margin-right: 70px;
+  margin-right: 45px;
   top: -300px;
   bottom: 0;
   position: relative;
@@ -328,12 +328,12 @@ article {
   letter-spacing: .125rem;
   text-transform: uppercase;
   }
-  div ul{
-  /* max-width: 90%; */
+  div ul.cd-box{
+  max-width: 90%;
   border: 1px solid #ffc423;
   border-width: 3px;
   text-align: center;
-  padding: 0;
+  padding: 0px 20px 0px 10px;
 }
 
   div li {
@@ -346,6 +346,13 @@ article {
   div li span {
   display: block;
   font-size: 3.5rem;
+  }
+  p.notice-text{
+    font-family: Roboto regular, sans-serif;
+    font-weight: inherit;
+    font-size: 1.1em;
+    text-align: left;
+    padding: 50px 40px 0px 10px;
   }
   #content {
   display: flex;
