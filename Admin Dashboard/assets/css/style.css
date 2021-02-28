@@ -12,13 +12,15 @@ body{
   background-size: cover;
   font-size: 100%;
   background-attachment: fixed;
-  width: 100%;
+  width: auto;
 }
 
 nav{
   background: #1d6986;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
               0 3px 6px rgba(0, 0, 0, .23);
+  width: auto;
+  z-index: 3;
 
 }
 nav:after{
@@ -168,14 +170,14 @@ nav ul ul ul li{
   }
   nav .logo{
     padding-left: 30px;
-    width: 100%;
+    width: auto;
   }
   .show + a, ul{
     display: none;
   }
   nav ul li,nav ul ul li{
     display: block;
-    width: 100%;
+    width: auto;
   }
   nav ul li a:hover{
     box-shadow: none;
