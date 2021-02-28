@@ -92,13 +92,22 @@ nav ul li a{
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
 }
+nav ul li a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
 nav ul li a:hover{
   color: #ffc423;
   text-decoration: none;
-  /* box-shadow:  inset 0 0 10px rgba(0,0,0,0.2); */
+}
+nav ul li a:active{
+  text-decoration: none;
 }
 nav ul li:hover{
   background-color: #124254;
+}
+nav ul li a:active {
+  color: green;
 }
 nav ul ul{
   position: absolute;
@@ -116,15 +125,26 @@ nav ul ul li .logout::before {
   font-family: "Font Awesome 5 Free";
   padding: 0 10px 0 0;
 }
-nav ul ul li a{
+nav ul ul li a:link{
   color:rgb(0, 0, 0);
 }
-nav ul ul li:hover{
-  background-color: #e0a900;
+nav ul ul li a:visited {
+  color: black;
+  text-decoration: none;
 }
 nav ul ul li a:hover{
   color: #1b1b1b;
   box-shadow: none;
+  text-decoration: none;
+}
+nav ul ul li:hover{
+  background-color: #e0a900;
+  text-decoration: none;
+}
+nav ul ul li a:active{
+  color: #1b1b1b;
+  box-shadow: none;
+  text-decoration: none;
 }
 nav ul ul ul{
   border-top: none;
