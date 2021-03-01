@@ -3,7 +3,8 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  font-family: Roboto,Roboto Condensed,Generica, sans-serif;  
+  font-family: Roboto,Roboto Condensed,Generica, sans-serif;
+  list-style: none;  
 }
 
 body{  
@@ -49,26 +50,24 @@ nav h3{
 
 nav .logo{
   float: left;
-  font-weight: 600;
+  position: relative;
   line-height: 70px;
-  padding-left: 10px;
+  margin-top: 10px;
+  margin-left: 8px;
+
 }
 nav .logo-pic{
   float: left;
-  /* object-fit: contain; */
-  width: 60px;
-  height: 60px;
-  background-size: cover;
   margin-top: 10px;
-  margin-left: 30px;
-  resize: both;
-  overflow: scroll;
+          margin-left: 15px;
+          width: 60px;
+          height: 60px;
 }
 nav ul{
   float: right;
   padding: 0;
   height: 80px;
-  margin-right: 40px;
+  /* margin-right: 40px; */
   margin-bottom: 0;
   list-style: none;
   position: relative;
@@ -88,7 +87,7 @@ nav ul li a{
   line-height: 70px;
   text-decoration: none;
   font-size: 1.6em;
-  padding: 40px 15px 0px 15px;
+  padding: 8px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
 }
@@ -119,6 +118,13 @@ nav ul ul{
 }
 nav ul ul li{
  height: 50px;
+ position: relative;
+ margin: 0px;
+ float: none;
+ display: list-item;
+}
+nav ul ul li a{
+  line-height: 50px;
 }
 nav ul ul li .logout::before {
   content: "\f2f5";
@@ -149,6 +155,11 @@ nav ul ul li a:active{
 nav ul ul ul{
   border-top: none;
 }
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
 nav ul li:hover > ul{
   top: 70px;
   opacity: 1;
@@ -178,26 +189,28 @@ nav ul ul ul li{
 .show,.icon,input{
   display: none;
 }
-.fa-plus{
+/* .fa-plus{
   font-size: 15px;
   margin-left: 40px;
-}
+} */
 
 @media all and (max-width: 968px) {
   nav ul{
     margin-right: 0px;
+    margin-left: 0px;
     float: left;
   }
   nav .logo{
-    padding-left: 30px;
+    padding-left: 10px;
     width: auto;
+    float: left;
   }
   .show + a, ul{
     display: none;
   }
   nav ul li,nav ul ul li{
     display: block;
-    width: auto;
+    width: 100%;
   }
   nav ul li a:hover{
     box-shadow: none;
@@ -205,13 +218,13 @@ nav ul ul ul li{
   .show{
     display: block;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.2em;
     padding: 0 20px;
     line-height: 70px;
     cursor: pointer;
   }
   .show:hover{
-    color: cyan;
+    color:white;
   }
   .icon{
     display: block;
@@ -226,6 +239,7 @@ nav ul ul ul li{
   nav ul ul{
     top: 70px;
     border-top: 0px;
+    border-bottom: 0px;
     float: none;
     position: static;
     display: none;
@@ -233,32 +247,28 @@ nav ul ul ul li{
     visibility: visible;
   }
   nav ul ul a{
-    padding-left: 40px;
+    left: 0;
   }
-  nav ul ul ul a{
+  /* nav ul ul ul a{
     padding-left: 80px;
   }
   nav ul ul ul li{
     position: static;
-  }
+  } */
   [id^=btn]:checked + ul{
+    left: 0;
     display: block;
   }
   nav ul ul li{
+    border-top: 0px;
     border-bottom: 0px;
   }
   span.cancel:before{
     content: '\f00d';
   }
+  
 }
-/* .content{
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-} */
+
 header{
   font-size: 35px;
   font-weight: 600;
@@ -326,7 +336,6 @@ article {
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 7px;
   font-size: 1em;
-  width: auto;
 }
 nav img.user-profile{
   margin-top: 0;
