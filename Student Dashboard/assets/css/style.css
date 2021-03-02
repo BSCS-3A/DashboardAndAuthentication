@@ -3,7 +3,6 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  font-family: Roboto,Roboto Condensed,Generica, sans-serif;
   list-style: none;  
 }
 body{  
@@ -13,6 +12,7 @@ body{
   font-size: 100%;
   background-attachment: fixed;
   width: auto;
+  height: 100%;
 }
 nav{
   background: #f8f8f8;
@@ -182,6 +182,11 @@ nav ul ul ul li{
 .Ashow,.Aicon,input{
   display: none;
 }
+nav img.Auser-profile{
+  margin-top: 0;
+  height: 40px;
+  width: 40px;
+}
 /* .fa-plus{
   font-size: 15px;
   margin-left: 40px;
@@ -331,35 +336,17 @@ img.Alogos{
     flex-direction: column;
   }
 }
-.Afooter {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height:5%;
-  padding: 5px 0px;
-  background-color: #fece4b;
-  text-align: center;
-}
-div p.Afooter-txt{
-  position: relative;
-  top: .5em;
-  font-family: Roboto Regular, sans-serif;
-  letter-spacing: 7px;
-  font-size: 1em;
-  color: black;
-}
-nav img.Auser-profile{
-  margin-top: 0;
-  height: 40px;
-  width: 40px;
-}
+
+
+
+
+
 /*countdown*/
-.Acontainer {
+aside{
   color: #333;
-  float: right;
+  float: left;
   text-align: center;
-  margin-right: 50px;
+  margin-left: 50px;
   top: 50px;
   bottom: 0;
   position: relative;
@@ -394,14 +381,33 @@ div li span {
   font-size: 4.5rem;
 
 }
-#content {
-  display: flex;
-  padding: 1rem;
-  position: relative;
-}
-div p.Aelec-guide-txt{
+aside p.Aelec-guide-txt{
   font-family: Roboto Regular, sans-serif;
   text-align: justify;
   font-size: 1.6em;
   margin-top: 3em;
+}
+
+
+#aside-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+#section-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+
+#footer{
+  background-color: #fece4b;
+  position: relative;
+  height: 5%;
+  margin-top: auto;
+  clear: both;
+  text-align: center;
+  padding: 5px 0px;
+  letter-spacing: 7px;
 }
