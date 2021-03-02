@@ -330,7 +330,7 @@ img.logos{
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: 1px;
+  padding: .5px;
   background-color: #124254;
   text-align: center;
 }
