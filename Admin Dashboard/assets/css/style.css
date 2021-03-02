@@ -245,6 +245,7 @@ nav ul ul ul li{
     position: static;
   } */
   [id^=btn]:checked + ul{
+    width: 100%;
     left: 0;
     display: block;
   }
