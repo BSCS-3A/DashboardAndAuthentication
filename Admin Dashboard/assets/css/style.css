@@ -352,10 +352,11 @@ nav img.user-profile{
   color: #333;
   float: right;
   text-align: center;
-  margin: 80px 50px 0px;
+  margin: 80px 50px 50px;
   position: relative;
   max-width: 500px;
   height: auto;
+
 }
 div #headline {
   font-weight: normal;
