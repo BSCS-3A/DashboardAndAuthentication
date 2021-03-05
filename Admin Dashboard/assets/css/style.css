@@ -29,7 +29,7 @@ nav:after{
 nav h2{
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
-  font-size: 140%;
+  font-size: 100%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   color: #ffffff;
@@ -39,7 +39,7 @@ nav h3{
   color: #ffffff;
   padding-top: 5px;
   font-weight: inherit;
-  font-size: 170%;
+  font-size: 120%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
@@ -75,7 +75,7 @@ nav ul li a{
   color: rgb(255, 255, 255);
   line-height: 70px;
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 1.2em;
   padding: 8px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
@@ -175,7 +175,11 @@ nav ul ul ul li{
   top: -60px;
   left: 150px;
 }
-.show,.icon,input{
+.show,.icon{
+  display: none !important;
+}
+
+input{
   display: none;
 }
 /* .fa-plus{
@@ -319,7 +323,7 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .container {
+  body, section {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
@@ -347,61 +351,49 @@ nav img.user-profile{
   height: 40px;
   width: 40px;
 }
-/*countdown*/
-.container {
-  color: #333;
-  float: right;
-  text-align: center;
-  margin: 80px 50px 50px;
-  position: relative;
-  max-width: 500px;
-  height: auto;
-
-}
-div #headline {
-  font-weight: normal;
-  letter-spacing: .125rem;
-  text-transform: uppercase;
-  font-size: 4em;
-  letter-spacing: 1.6px;
-  color: black;
-  margin-bottom: .8em;
-  margin-top: 0;
-}
-div ul{
-  /* max-width: 90%; */
-  border: 1px solid #ffc423;
-  border-width: 3px;
-  text-align: center;
-  padding: 0;
-}
-div li {
-  display: inline-block;
-  font-size: 1.5em;
-  list-style-type: none;
-  padding: 5%;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-div li span {
-  display: block;
-  font-size: 4.5rem;
-}
-/* #content {
-  display: flex;
-  padding: 1rem;
-  position: relative;
-} */
-div p.elec-guide-txt{
-  font-family: Roboto Regular, sans-serif;
-  text-align: justify;
-  font-size: 1.6em;
-  margin-top: 1em;
-  margin-bottom: 0;
-  float: right;
-}
-
 /*Datatable*/
 div.container {
-  width: 50%;
+  background-color:#dddddd;
+  padding: 1rem;
+  margin-top: 5% ;
+  border: 2px solid #124254;
+  width: 80%;
+  opacity: 80%;
+}
+.datatable {
+  border: 1px solid #124254;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin:0px;
+  text-align: center;
+}
+thead {
+  border: 1px solid #124254;
+  color: #EEEEEE;
+  background-color: #18566e;
+  text-align: center;
+}
+thead input {
+  width: 100%;
+}
+tbody {
+  border: 1px solid #124254;
+  }
+th {
+    border: 1px solid #124254;
+    color: #EEEEEE;
+    background-color: #18566e;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: Roboto regular, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+td {
+    border: 1px solid #124254;
+    padding: 0px;
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden;
+    font-size: 1.2rem;
 }
