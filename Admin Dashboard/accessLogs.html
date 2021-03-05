@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap3.3.7.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/datatable-bootstrap-min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/datatable-bootstrap-min.css">
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css">
     <script src="assets/js/a076d05399.js"></script>
     <script src="assets/js/dataTables.bootstrap.js"></script>
     <script src="assets/js/jquery-3.5.1.js"></script>
@@ -22,18 +22,18 @@
 
 <body>
     <nav>
-        <input id="nav-toggle" type="checkbox">
+        <input id="nav-toggle1" type="checkbox">
         <div class="logo">
             <h2>BUCEILS HS</h2>
             <h3>ONLINE VOTING SYSTEM</h3>
         </div>
         <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
-        <input type="checkbox" id="btn">
+        <input id="nav-toggle2" type="checkbox" id="btn">
         <ul>
             <li>
                 <label for="btn-1" class="show">ACCOUNTS</label>
                 <a href="#">ACCOUNTS</a>
-                <input type="checkbox" id="btn-1">
+                <input id="nav-toggle3" type="checkbox" id="btn-1">
                 <ul>
                     <li><a href="#">Students</a></li>
                     <li><a href="#">Admin</a></li>
@@ -42,7 +42,7 @@
             <li>
                 <label for="btn-2" class="show">ELECTION</label>
                 <a href="#">ELECTION</a>
-                <input type="checkbox" id="btn-2">
+                <input id="nav-toggle4" type="checkbox" id="btn-2">
                 <ul>
                     <li><a href="#">Archive</a></li>
                     <li><a href="#">Vote Status</a></li>
@@ -59,7 +59,7 @@
             <li>
                 <label for="btn-4" class="show">LOGS</label>
                 <a href="#">LOGS</a>
-                <input type="checkbox" id="btn-4">
+                <input id="nav-toggle5" type="checkbox" id="btn-4">
                 <ul>
                     <li><a href="#">Access Log</a></li>
                     <li><a href="#">Activity Log</a></li>
@@ -70,7 +70,7 @@
             <li>
                 <label for="btn-5" class="show">Admin Name</label>
                 <a class="user" href="#"><img class="user-profile" src="assets/img/user.png"></a>
-                <input type="checkbox" id="btn-5">
+                <input id="nav-toggle6" type="checkbox" id="btn-5">
                 <ul>
                     <li><a class="username" href="#">Admin Name</a></li>
                     <li class="logout">
@@ -88,90 +88,90 @@
                 <table id="A-dataTable" class="center" style="width:100%">
                     <thead>
                         <tr>
-                            <th>Access Time</th>
                             <th>Access Date</th>
+                            <th>Access Time</th>
                             <th>Action</th>
                             <th>Accessed By</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
+                            <td>12-14-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>maedeljoice@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>63</td>
+                            <td>12-10-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>fdfdf@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
-                            <td>San Francisco</td>
-                            <td>66</td>
+                            <td>12-19-2021</td>
+                            <td>12:47:09</td>
+                            <td>Logout</td>
+                            <td>jsjajsjas@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Cedric Kelly</td>
-                            <td>Senior Javascript Developer</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
+                            <td>10-29-2021</td>
+                            <td>22:48:19</td>
+                            <td>Login</td>
+                            <td>dsdsd@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Airi Satou</td>
-                            <td>Accountant</td>
-                            <td>Tokyo</td>
-                            <td>33</td>
+                            <td>01-29-2021</td>
+                            <td>02:48:19</td>
+                            <td>Logout</td>
+                            <td>trtr@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Brielle Williamson</td>
-                            <td>Integration Specialist</td>
-                            <td>New York</td>
-                            <td>61</td>
+                            <td>01-29-2021</td>
+                            <td>02:48:19</td>
+                            <td>Logout</td>
+                            <td>trtr@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Herrod Chandler</td>
-                            <td>Sales Assistant</td>
-                            <td>San Francisco</td>
-                            <td>59</td>
+                            <td>01-29-2021</td>
+                            <td>02:48:19</td>
+                            <td>Logout</td>
+                            <td>trtr@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Rhona Davidson</td>
-                            <td>Integration Specialist</td>
-                            <td>Tokyo</td>
-                            <td>55</td>
+                            <td>12-19-2021</td>
+                            <td>12:47:09</td>
+                            <td>Logout</td>
+                            <td>jsjajsjas@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Colleen Hurst</td>
-                            <td>Javascript Developer</td>
-                            <td>San Francisco</td>
-                            <td>39</td>
+                            <td>12-19-2021</td>
+                            <td>12:47:09</td>
+                            <td>Logout</td>
+                            <td>jsjajsjas@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Sonya Frost</td>
-                            <td>Software Engineer</td>
-                            <td>Edinburgh</td>
-                            <td>23</td>
+                            <td>12-10-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>fdfdf@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Jena Gaines</td>
-                            <td>Office Manager</td>
-                            <td>London</td>
-                            <td>30</td>
+                            <td>12-10-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>fdfdf@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Quinn Flynn</td>
-                            <td>Support Lead</td>
-                            <td>Edinburgh</td>
-                            <td>22</td>
+                            <td>12-10-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>fdfdf@bicol-u.edu.ph</td>
                         </tr>
                         <tr>
-                            <td>Charde Marshall</td>
-                            <td>Regional Director</td>
-                            <td>San Francisco</td>
-                            <td>36</td>
+                            <td>12-10-2021</td>
+                            <td>12:27:09</td>
+                            <td>Login</td>
+                            <td>fdfdf@bicol-u.edu.ph</td>
                         </tr>
                     </tbody>
                 </table>
