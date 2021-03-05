@@ -400,3 +400,8 @@ div p.elec-guide-txt{
   margin-bottom: 0;
   float: right;
 }
+
+/*Datatable*/
+div.container {
+  width: 50%;
+}
