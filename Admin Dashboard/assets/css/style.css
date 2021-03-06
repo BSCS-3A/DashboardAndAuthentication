@@ -336,16 +336,17 @@ img.logos{
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: .5px;
+  padding: 5px;
   background-color: #124254;
   text-align: center;
 }
 div p.footer-txt{
   position: relative;
-  top: .5em;
+  margin-top: auto;
+  margin-bottom: auto;
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 7px;
-  font-size: 1em;
+  font-size: 10px;
   color: #ffffff;
 }
 nav img.user-profile{
@@ -363,12 +364,13 @@ div.container {
   width: 80%;
   height: auto;
   opacity: 80%;
+  font-size: .8rem;
 }
 .datatable {
   border: 1px solid #124254;
   border-collapse: collapse;
   table-layout: auto;
-  margin:0px;
+  margin: 0px;
   text-align: center;
 }
 thead {
@@ -380,15 +382,15 @@ thead {
 thead input {
   width: 100%;
 }
-tbody {
+/* tbody {
   border: 1px solid #124254;
-  }
+  } */
 th {
-    border: 1px solid #124254;
-    color: #EEEEEE;
+    /* border: 1px solid #ffffff; */
+    color: #ffffff;
     background-color: #18566e;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: .8rem;
     font-family: Roboto regular, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -399,22 +401,21 @@ td {
     max-width: 150px;
     max-height: 150px;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: .8rem;
 }
 #aHeader{
   position: relative;
   z-index: -1;
   padding: 6px;
   background: #124254;
-  color: #f1f1f1;
+  color: #ffffff;
   width: 100%;
-  /* height: auto; */
   text-align: center;
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 6px;
 }
 h2.aHeader-txt{
-  /* font-size: inherit !important; */
-  margin-top: .8%;
-  margin-bottom: .8%;
+  font-size: 24px;
+  margin-top: .5%;
+  margin-bottom: .5%;
 }

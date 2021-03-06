@@ -7,15 +7,12 @@
     <meta charset="utf-8">
     <link rel="icon" href="assets/img/BUHS LOGO.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/bootstrap3.3.7.css">
-    <link rel="stylesheet" href="assets/css/dataTables.bootstrap.css">
-    <!-- <link rel="stylesheet" href="assets/css/datatable-bootstrap-min.css"> -->
+    <link rel="stylesheet" href="assets/css/bootstrap4.5.2.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
-    <link rel="stylesheet" href="assets/css/dataTables.fontAwesome.css">
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css"> -->
-    <script src="assets/js/a076d05399.js"></script>
-    <script src="assets/js/dataTables.bootstrap.js"></script>
+    <!-- <script src="assets/js/a076d05399.js"></script> -->
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
     <script src="assets/js/jquery-3.5.1.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
@@ -304,27 +301,6 @@
     <script>
         $(document).ready(function () {
             $('#A-dataTable').DataTable();
-        });
-
-        // // Setup - add a text input to each footer cell
-        // $('#example thead tr').clone(true).appendTo('#example thead');
-        // $('#example thead tr:eq(1) th').each(function (i) {
-        //     var title = $(this).text();
-        //     $(this).html('<input type="text" placeholder="Search ' + title + '" />');
-
-        //     $('input', this).on('keyup change', function () {
-        //         if (table.column(i).search() !== this.value) {
-        //             table
-        //                 .column(i)
-        //                 .search(this.value)
-        //                 .draw();
-        //         }
-        //     });
-        // });
-
-        var table = $('#example').DataTable({
-            orderCellsTop: true,
-            fixedHeader: true
         });
     </script>
 
