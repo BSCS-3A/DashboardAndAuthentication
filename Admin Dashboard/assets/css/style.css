@@ -26,7 +26,8 @@ nav:after{
   clear: both;
   display: table;
 }
-nav h2{
+h2.aLogo-txt1{
+  margin-top: 3px;
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
   font-size: 100%;
@@ -34,7 +35,7 @@ nav h2{
   letter-spacing: 6px;
   color: #ffffff;
 }
-nav h3{
+h3.aLogo-txt2{
   margin-top: 0px;
   color: #ffffff;
   padding-top: 5px;
@@ -44,12 +45,12 @@ nav h3{
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
-nav .aLogo{
+div.aLogo{
   float: left;
   position: relative;
   line-height: 80px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-top: 14px;
+  margin-bottom: 4px;
   margin-left: 40px;
 }
 nav ul{
