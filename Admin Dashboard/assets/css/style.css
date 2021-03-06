@@ -326,7 +326,7 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section {
+  body, section, .aContainer {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
@@ -354,6 +354,53 @@ nav img.user-profile{
   margin-top: 0;
   height: 40px;
   width: 40px;
+}
+/*countdown*/
+.aContainer {
+  color: #333;
+  float: right;
+  text-align: center;
+  margin-right: 50px;
+  margin: 80px 50px 50px;
+  position: relative;
+  max-width: 500px;
+}
+#aHeadline {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  letter-spacing: 1.6px;
+  color: black;
+  margin-bottom: .8em;
+  margin-top: 0;
+}
+ul.aCD-contents{
+  /* max-width: 90%; */
+  border: 1px solid #ffc423;
+  border-width: 3px;
+  text-align: center;
+  padding: 0;
+}
+div li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 5%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+div li span {
+  display: block;
+  font-size: 2.5rem;
+}
+p.elec-guide-txt{
+  font-family: Roboto Regular, sans-serif;
+  text-align: justify;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  float: right;
 }
 /*Datatable*/
 div.container {
