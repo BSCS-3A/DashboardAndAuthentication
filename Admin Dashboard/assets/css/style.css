@@ -358,24 +358,24 @@ nav img.user-profile{
 div.container {
   background-color:#dddddd;
   padding: 1rem;
-  margin-top: 4% ;
-  margin-bottom: 4%;
+  margin-top: 3%;
+  margin-bottom: 3%;
   border: 2px solid #124254;
   width: 80%;
   height: auto;
   opacity: 80%;
   font-size: .8rem;
 }
-.datatable {
-  border: 1px solid #124254;
-  border-collapse: collapse;
+#A-dataTable {
+  border-collapse: collapse !important;
   table-layout: auto;
   margin: 0px;
   text-align: center;
   opacity: 100%;
+  width: 100%;
 }
 thead {
-  border: 1px solid #124254;
+  width: 100%;
   color: #EEEEEE;
   background-color: #18566e;
   text-align: center;
@@ -383,9 +383,6 @@ thead {
 }
 thead input {
   width: 100%;
-}
-tbody {
-  border: 1px solid #124254;
 }
 th {
   color: #ffffff;
@@ -395,7 +392,7 @@ th {
   font-family: Roboto regular, sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px; 
-  border-right: 1px solid #dddddd;
+  border: 1px solid #124254 !important;
 }
 td {
     border: 1px solid #124254;
