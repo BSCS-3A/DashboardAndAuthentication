@@ -372,29 +372,31 @@ div.container {
   table-layout: auto;
   margin: 0px;
   text-align: center;
+  opacity: 100%;
 }
 thead {
   border: 1px solid #124254;
   color: #EEEEEE;
   background-color: #18566e;
   text-align: center;
+  opacity: 100%;
 }
 thead input {
   width: 100%;
 }
-/* tbody {
+tbody {
   border: 1px solid #124254;
-  } */
+}
 th {
-    /* border: 1px solid #ffffff; */
-    color: #ffffff;
-    background-color: #18566e;
-    text-align: center;
-    font-size: .8rem;
-    font-family: Roboto regular, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+  color: #ffffff;
+  background-color: #18566e;
+  text-align: center;
+  font-size: .8rem;
+  font-family: Roboto regular, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+  border-right: 1px solid #dddddd;
+}
 td {
     border: 1px solid #124254;
     padding: 0px;
