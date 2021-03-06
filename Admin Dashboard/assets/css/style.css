@@ -44,11 +44,12 @@ nav h3{
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
-nav .logo{
+nav .aLogo{
   float: left;
   position: relative;
   line-height: 80px;
-  margin-top: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-left: 40px;
 }
 nav ul{
@@ -163,7 +164,7 @@ nav ul ul li{
   float: none;
   display: list-item;
   border-bottom: 1px solid rgba(0,0,0,0.3);
-  z-index: 1;
+  z-index: 2;
 }
 nav ul ul li a{
   line-height: 50px;
@@ -357,9 +358,10 @@ div.container {
   background-color:#dddddd;
   padding: 1rem;
   margin-top: 4% ;
-  margin-bottom: 5%;
+  margin-bottom: 4%;
   border: 2px solid #124254;
   width: 80%;
+  height: auto;
   opacity: 80%;
 }
 .datatable {
@@ -402,11 +404,11 @@ td {
 #aHeader{
   position: relative;
   z-index: -1;
-  padding: .5ch;
+  padding: 6px;
   background: #124254;
   color: #f1f1f1;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   text-align: center;
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 6px;
