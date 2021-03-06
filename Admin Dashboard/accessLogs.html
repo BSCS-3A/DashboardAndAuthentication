@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap.css">
     <!-- <link rel="stylesheet" href="assets/css/datatable-bootstrap-min.css"> -->
     <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/dataTables.fontAwesome.css">
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.8/css/fixedHeader.dataTables.min.css"> -->
     <script src="assets/js/a076d05399.js"></script>
     <script src="assets/js/dataTables.bootstrap.js"></script>
     <script src="assets/js/jquery-3.5.1.js"></script>
@@ -89,7 +90,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <table id="A-dataTable" class="center" style="width:100%">
+                <table id="A-dataTable" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
                             <th>Access Date</th>
@@ -290,7 +291,6 @@
     </div>
 
 
-
     <!-- footer -->
     <div class="footer">
         <p class="footer-txt">BS COMPUTER SCIENCE 3A © 2021</p>
@@ -306,21 +306,21 @@
             $('#A-dataTable').DataTable();
         });
 
-        // Setup - add a text input to each footer cell
-        $('#example thead tr').clone(true).appendTo('#example thead');
-        $('#example thead tr:eq(1) th').each(function (i) {
-            var title = $(this).text();
-            $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+        // // Setup - add a text input to each footer cell
+        // $('#example thead tr').clone(true).appendTo('#example thead');
+        // $('#example thead tr:eq(1) th').each(function (i) {
+        //     var title = $(this).text();
+        //     $(this).html('<input type="text" placeholder="Search ' + title + '" />');
 
-            $('input', this).on('keyup change', function () {
-                if (table.column(i).search() !== this.value) {
-                    table
-                        .column(i)
-                        .search(this.value)
-                        .draw();
-                }
-            });
-        });
+        //     $('input', this).on('keyup change', function () {
+        //         if (table.column(i).search() !== this.value) {
+        //             table
+        //                 .column(i)
+        //                 .search(this.value)
+        //                 .draw();
+        //         }
+        //     });
+        // });
 
         var table = $('#example').DataTable({
             orderCellsTop: true,
