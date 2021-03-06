@@ -33,17 +33,25 @@ h2.aLogo-txt1{
   font-size: 100%;
   margin-bottom: 0px;
   letter-spacing: 6px;
+  text-decoration: none;
+}
+h2.aLogo-txt1 a{
+  text-decoration: none;
   color: #ffffff;
 }
 h3.aLogo-txt2{
   margin-top: 0px;
   color: #ffffff;
   padding-top: 5px;
-  font-weight: inherit;
+  font-weight: lighter;
   font-size: 120%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
+}
+h3.aLogo-txt2 a{
+  text-decoration: none;
+  color: #ffffff;
 }
 div.aLogo{
   float: left;
