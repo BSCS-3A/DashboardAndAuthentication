@@ -12,7 +12,7 @@ body{
   font-size: 100%;
   background-attachment: fixed;
   width: auto;
-  height: 100%;
+  min-height: 100%;
 }
 nav{
   background: #f8f8f8;
@@ -20,6 +20,9 @@ nav{
               0 3px 6px rgba(0, 0, 0, .23);
   width: auto;
   z-index: 3;
+}
+nav:before{
+  min-height: 100%;
 }
 nav:after{
   content: '';
@@ -214,6 +217,7 @@ nav img.Auser-profile{
   nav ul li a:hover{
     box-shadow: none;
   }
+
   .Ashow{
     display: block;
     background-color: #18566e;
@@ -269,16 +273,7 @@ nav img.Auser-profile{
   }
   
 }
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-  font-family: Generica regular, sans-serif;
-}
+
 article p{
   font-family: Roboto regular, sans-serif;
   color: #124254;
@@ -389,6 +384,7 @@ aside p.Aelec-guide-txt{
 }
 
 
+
 #aside-container{
   min-height: 100%;
   overflow: auto;
@@ -397,11 +393,11 @@ aside p.Aelec-guide-txt{
 #section-container{
   min-height: 100%;
   overflow: auto;
-  padding-bottom: 5%;
+  padding-bottom: 12%;
 }
 
 
-#footer{
+footer{
   background-color: #fece4b;
   position: relative;
   height: 5%;
