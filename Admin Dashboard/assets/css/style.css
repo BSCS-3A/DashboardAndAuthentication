@@ -422,7 +422,7 @@ div.container {
   opacity: 80%;
   font-size: .8rem;
 }
-#A-dataTable {
+#ADdataTable {
   border-collapse: collapse !important;
   table-layout: auto;
   margin: 0px;
@@ -473,4 +473,7 @@ h2.aHeader-txt{
   font-size: 24px;
   margin-top: .5%;
   margin-bottom: .5%;
+}
+.row{
+  overflow-x: auto; /* Horizontal */
 }

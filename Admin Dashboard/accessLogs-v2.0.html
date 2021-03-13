@@ -9,10 +9,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/bootstrap4.5.2.css">
     <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/rowReorder.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
     <!-- <script src="assets/js/a076d05399.js"></script> -->
     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/dataTables.rowReorder.min.js"></script>
+    <script src="assets/js/dataTables.responsive.min.js"></script>
     <script src="assets/js/jquery-3.5.1.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
@@ -91,13 +95,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <table id="A-dataTable" class="table table-hover" style="width:100%">
+                <table id="ADdataTable" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <th>Access Date</th>
-                            <th>Access Time</th>
-                            <th>Action</th>
-                            <th>Accessed By</th>
+                            <th class="min-mobile">Access Date</th>
+                            <th class="min-mobile">Access Time</th>
+                            <th class="min-mobile">Action</th>
+                            <th class="min-mobile">Accessed By</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -302,15 +306,24 @@
             $('span').toggleClass("cancel");
         });
     </script>
+    <!-- <script>
+        $(document).ready(function () {
+            $('#ADdataTable').DataTable({
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true
+            });
+        
+        });
+    </script> -->
     <script>
         $(document).ready(function () {
-            $('#A-dataTable').DataTable();
+            var table = $('#ADdataTable').DataTable({
+                responsive: true
+            });
         });
-    </script>
-    <script>
-        $('#myTable').DataTable({
-            responsive: true
-        });
+
     </script>
 </body>
 
