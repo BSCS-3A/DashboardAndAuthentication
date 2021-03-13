@@ -185,7 +185,7 @@ nav ul ul ul li{
   top: -60px;
   left: 150px;
 }
-.show,.icon{
+.Ashow,.icon{
   display: none
 }
 
@@ -209,7 +209,7 @@ nav ul ul ul li{
     width: auto;
     float: left;
   } */
-  .show + a, ul{
+  .Ashow + a, ul{
     display: none;
   }
   nav ul li,nav ul ul li{
@@ -219,7 +219,7 @@ nav ul ul ul li{
   nav ul li a:hover{
     box-shadow: none;
   }
-  .show{
+  .Ashow{
     display: block;
     color: #ffffff;
     font-size: 1.2em;
@@ -227,7 +227,7 @@ nav ul ul ul li{
     line-height: 70px;
     cursor: pointer;
   }
-  .show:hover{
+  .Ashow:hover{
     color:white;
   }
   .icon{
@@ -253,12 +253,12 @@ nav ul ul ul li{
   nav ul ul a{
     left: 0;
   }
-  /* nav ul ul ul a{
+  nav ul ul ul a{
     padding-left: 80px;
   }
   nav ul ul ul li{
     position: static;
-  } */
+  }
   [id^=btn]:checked + ul{
     width: 100%;
     left: 0;
