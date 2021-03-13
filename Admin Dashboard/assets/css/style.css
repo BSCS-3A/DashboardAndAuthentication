@@ -189,8 +189,8 @@ nav ul ul ul li{
   display: none
 }
 
-#nav-toggle1, #nav-toggle2, #nav-toggle3,
-#nav-toggle4, #nav-toggle5, #nav-toggle6{
+.nav-toggle1, .nav-toggle2, .nav-toggle3,
+.nav-toggle4, .nav-toggle5, .nav-toggle6{
   display: none;
 }
 /* .fa-plus{
