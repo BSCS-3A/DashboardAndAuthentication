@@ -474,6 +474,6 @@ h2.aHeader-txt{
   margin-top: .5%;
   margin-bottom: .5%;
 }
-.row{
-  overflow-x: auto; /* Horizontal */
-}
+/* .row{
+  overflow-x: auto; 
+} */
