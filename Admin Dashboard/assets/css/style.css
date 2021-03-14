@@ -64,7 +64,7 @@ div.aLogo{
 nav ul{
   float: right;
   padding: 0;
-  height: 80px;
+  height: 30%;
   /* margin-right: 40px; */
   margin-bottom: 0;
   list-style: none;
@@ -334,7 +334,7 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .aContainer {
+  body, section, .aContainer, .ADcountdown, .aCD-contents {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
@@ -368,10 +368,9 @@ nav img.user-profile{
   color: #333;
   float: right;
   text-align: center;
-  margin-right: 50px;
   margin: 80px 50px 50px;
   position: relative;
-  max-width: 500px;
+  max-width: 35%;
 }
 #aHeadline {
   font-weight: normal;
@@ -382,6 +381,7 @@ nav img.user-profile{
   color: black;
   margin-bottom: .8em;
   margin-top: 0;
+  width: auto;
 }
 ul.aCD-contents{
   /* max-width: 90%; */
