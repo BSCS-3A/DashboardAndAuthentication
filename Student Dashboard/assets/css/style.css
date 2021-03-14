@@ -30,11 +30,16 @@ nav:after{
   display: table;
 }
 nav h2{
+  margin-top: 3px;
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
-  font-size: 140%;
+  font-size: 180%;
   margin-bottom: 0px;
   letter-spacing: 6px;
+  color: #124254;
+}
+h2 a.Atext-link{
+  text-decoration: none;
   color: #124254;
 }
 nav h3{
@@ -42,16 +47,20 @@ nav h3{
   color: #124254;
   padding-top: 5px;
   font-weight: inherit;
-  font-size: 170%;
+  font-size: 200%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
+}
+h3 a.Atext-link{
+  text-decoration: none;
+  color: #124254;
 }
 nav .Alogo{
   float: left;
   position: relative;
   line-height: 80px;
-  margin-top: 5px;
+  margin-top: 14px;
   margin-left: 40px;
 }
 nav ul{
@@ -78,7 +87,7 @@ nav ul li a{
   color: black;
   line-height: 70px;
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 2em;
   padding: 8px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
