@@ -26,29 +26,39 @@ nav:after{
   clear: both;
   display: table;
 }
-nav h2{
+h2.aLogo-txt1{
+  margin-top: 3px;
   font-family: Roboto Regular, sans-serif;
   font-weight: inherit;
-  font-size: 140%;
+  font-size: 100%;
   margin-bottom: 0px;
   letter-spacing: 6px;
+  text-decoration: none;
+}
+h2.aLogo-txt1 a{
+  text-decoration: none;
   color: #ffffff;
 }
-nav h3{
+h3.aLogo-txt2{
   margin-top: 0px;
   color: #ffffff;
   padding-top: 5px;
-  font-weight: inherit;
-  font-size: 170%;
+  font-weight: lighter;
+  font-size: 120%;
   margin-bottom: 0px;
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
-nav .logo{
+h3.aLogo-txt2 a{
+  text-decoration: none;
+  color: #ffffff;
+}
+div.aLogo{
   float: left;
   position: relative;
   line-height: 80px;
-  margin-top: 5px;
+  margin-top: 14px;
+  margin-bottom: 4px;
   margin-left: 40px;
 }
 nav ul{
@@ -75,7 +85,7 @@ nav ul li a{
   color: rgb(255, 255, 255);
   line-height: 70px;
   text-decoration: none;
-  font-size: 1.6em;
+  font-size: 1.2em;
   padding: 8px 15px;
   letter-spacing: 1px;
   font-family: Roboto Light, sans-serif;
@@ -163,7 +173,7 @@ nav ul ul li{
   float: none;
   display: list-item;
   border-bottom: 1px solid rgba(0,0,0,0.3);
-  z-index: 1;
+  z-index: 2;
 }
 nav ul ul li a{
   line-height: 50px;
@@ -324,7 +334,7 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .container {
+  body, section, .aContainer {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
@@ -335,16 +345,17 @@ img.logos{
   bottom: 0;
   width: 100%;
   height: auto;
-  padding: .5px;
+  padding: 5px;
   background-color: #124254;
   text-align: center;
 }
 div p.footer-txt{
   position: relative;
-  top: .5em;
+  margin-top: auto;
+  margin-bottom: auto;
   font-family: Roboto Regular, sans-serif;
   letter-spacing: 7px;
-  font-size: 1em;
+  font-size: 10px;
   color: #ffffff;
 }
 nav img.user-profile{
@@ -353,27 +364,26 @@ nav img.user-profile{
   width: 40px;
 }
 /*countdown*/
-.container {
+.aContainer {
   color: #333;
   float: right;
   text-align: center;
+  margin-right: 50px;
   margin: 80px 50px 50px;
   position: relative;
   max-width: 500px;
-  height: auto;
-
 }
-div #headline {
+#aHeadline {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 2.5em;
   letter-spacing: 1.6px;
   color: black;
   margin-bottom: .8em;
   margin-top: 0;
 }
-div ul{
+ul.aCD-contents{
   /* max-width: 90%; */
   border: 1px solid #ffc423;
   border-width: 3px;
@@ -382,7 +392,7 @@ div ul{
 }
 div li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
   list-style-type: none;
   padding: 5%;
   text-transform: uppercase;
@@ -390,17 +400,12 @@ div li {
 }
 div li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
 }
-/* #content {
-  display: flex;
-  padding: 1rem;
-  position: relative;
-} */
-div p.elec-guide-txt{
+p.elec-guide-txt{
   font-family: Roboto Regular, sans-serif;
   text-align: justify;
-  font-size: 1.6em;
+  font-size: 1em;
   margin-top: 1em;
   margin-bottom: 0;
   float: right;
