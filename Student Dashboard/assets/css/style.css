@@ -1,3 +1,4 @@
+/* Static Page */
 *{
   margin: 0;
   padding: 0;
@@ -5,6 +6,8 @@
   box-sizing: border-box;
   list-style: none;  
 }
+
+/* Body */
 body{  
   font-family: Roboto,Roboto Thin,Generica, sans-serif;  
   background-image: url("../img/studentBG.png");
@@ -14,6 +17,8 @@ body{
   width: auto;
   min-height: 100%;
 }
+
+/* Top Navigation */
 nav{
   background: #f8f8f8;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .15 ),
@@ -63,6 +68,9 @@ nav .Alogo{
   margin-top: 14px;
   margin-left: 40px;
 }
+
+
+/* Top Navigation Item List */
 nav ul{
   float: right;
   padding: 0;
@@ -204,6 +212,9 @@ nav img.Auser-profile{
   margin-left: 40px;
 } */
 
+
+
+/* Mobile */
 @media all and (max-width: 968px) {
   nav ul{
     margin-right: 0px;
@@ -279,10 +290,11 @@ nav img.Auser-profile{
   }
   span.cancel:before{
     content: '\f00d';
-  }
-  
+  } 
 }
 
+
+/* Left Content */
 article p{
   font-family: Roboto regular, sans-serif;
   color: #124254;
@@ -308,6 +320,11 @@ section {
   margin-top: 100px;
   max-width: 800px;
   float: left;
+}
+#section-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 12%;
 }
 /* Style the content */
 article {
@@ -391,21 +408,15 @@ aside p.Aelec-guide-txt{
   font-size: 1.6em;
   margin-top: 3em;
 }
-
-
-
 #aside-container{
   min-height: 100%;
   overflow: auto;
   padding-bottom: 5%;
 }
-#section-container{
-  min-height: 100%;
-  overflow: auto;
-  padding-bottom: 12%;
-}
 
 
+
+/* Footer */
 footer{
   background-color: #fece4b;
   position: relative;
