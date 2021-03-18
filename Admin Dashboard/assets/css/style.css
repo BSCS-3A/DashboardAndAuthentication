@@ -73,8 +73,8 @@ nav ul{
   text-align: center;
   z-index: 4;
 }
-nav ul li{
-  float: left;
+nav ul li{ /*Accounts, Election, Candidates, etc*/
+  /* float: left; */
   display: inline-block;
   height: 80px; /*80px ang dati*/
   background: #1d6986;
@@ -108,7 +108,7 @@ nav ul li:hover{
 nav ul li a:active {
   color: green;
 }
-nav ul ul{
+nav ul ul{ /*dropdown container*/
   position: absolute;
   top: 90px;
   border-top: 3px solid #124254;
@@ -116,7 +116,7 @@ nav ul ul{
   visibility: hidden;
   transition: top .3s;
 }
-nav ul ul li{
+nav ul ul li{ /*dropdown list*/
  height: 50px;
  position: relative;
  margin: 0px;
