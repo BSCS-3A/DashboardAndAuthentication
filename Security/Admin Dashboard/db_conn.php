@@ -1,13 +1,14 @@
 <?php
-
-$sname= "localhost";
-$unmae= "root";
-$password = "";
-
-$db_name = "db_test";
-
-$conn = mysqli_connect($sname, $unmae, $password, $db_name);
-
-if (!$conn) {
-	echo "Connection failed!";
-}
+$servername = "localhost";
+$username = "id16218880_bscs";
+$password = "J!\-~q!r]fZJf0EH";
+$dbname = "id16218880_buceils";
+    
+    // Create connection
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+    if (!$conn) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }
+ 
+?>

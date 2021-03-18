@@ -1,41 +1,184 @@
 <?php
 session_start();
 include("db_conn.php");
-if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
+ if (isset($_SESSION['admin_id']) && isset($_SESSION['username'])) {
+    
+        $idletime=900;//after 60 seconds the user gets logged out
+
+        if (time()-$_SESSION['timestamp']>$idletime){
+          header("Location: Logout.php");
+        }else{
+          $_SESSION['timestamp']=time();
+        }
+    
 
 ?>
 
+
 <!DOCTYPE html>
-<head><title>Welcome to Dashboard</title></head>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <link rel="icon" href="assets/img/BUHS LOGO.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap4.5.2.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="assets/css/rowReorder.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+    <!-- <script src="assets/js/a076d05399.js"></script> -->
+    <script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/js/dataTables.rowReorder.min.js"></script>
+    <script src="assets/js/dataTables.responsive.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
+    <title>BUCEILS Voting System</title>
+</head>
+
 <body>
-    Welcome! <?php echo $_SESSION['admin_fname'].' '.$_SESSION['admin_lname'].'<br>'; ?>
-    <table width="50%" height="15%" border="1">
-    <tbody>
-     <tr >
-    <td><center>Activity No.</center></td><td><center>Name</center></td><td><center>Action</center></td><td><center>Date</center></td><td><center>Time</center></td>
-    </tr>
+    <nav>
+        <input class="nav-toggle1" type="checkbox">
+        <div class="aLogo">
+            <h2 class="aLogo-txt1"><a href="AdminDashboard.php">BUCEILS HS</a></h2>
+            <h3 class="aLogo-txt2"><a href="AdminDashboard.php">ONLINE VOTING SYSTEM</a></h3>
+        </div>
+        <label for="btn" class="icon"><span class="fa fa-bars"></span></label>
+        <input class="nav-toggle2" type="checkbox" id="btn">
+        <ul>
+            <li>
+                <label for="btn-1" class="Ashow">ACCOUNTS</label>
+                <a href="#">ACCOUNTS</a>
+                <input class="nav-toggle3" type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="Ashow">ELECTION</label>
+                <a href="#">ELECTION</a>
+                <input class="nav-toggle4" type="checkbox" id="btn-2">
+                <ul>
+                    <li><a href="#">Archive</a></li>
+                    <li><a href="#">Vote Status</a></li>
+                    <li><a href="#">Vote Result</a>
+                        <ul>
+                            <li><a href="#">Make Report</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Configuration</a>
+                        <ul>
+                            <li><a href="#">Scheduler</a></li>
+                            <li><a href="#">Signatory</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../Candidate-Management-main/LandingPage/LandingPageV1.0.php">CANDIDATES</a></li>
+            <li>
+                <label for="btn-4" class="Ashow">LOGS</label>
+                <a href="#">LOGS</a>
+                <input class="nav-toggle5" type="checkbox" id="btn-4">
+                <ul>
+                    <li><a href="accessLogs-v2.0.html">Access Log</a></li>
+                    <li><a href="#">Activity Log</a></li>
+                    <li><a href="#">Vote Summary</a></li>
+                </ul>
+            </li>
+            <li><a href="#">MESSAGES</a></li>
+            <li>
+                <label for="btn-5" class="Ashow">Admin Name</label>
+                <a class="user" href="#"><img class="user-profile" src="assets/img/<?php echo $_SESSION['photo'];?>"></a>
+                <input class="nav-toggle6" type="checkbox" id="btn-5">
+                <ul>
+                    <li><a class="username" href="#"><?php echo $_SESSION['admin_fname']." ".$_SESSION['admin_lname']; ?></a></li>
+                    <li class="logout">
+                        <span class="fa fa-sign-out"></span><a href="Logout.php">LOGOUT</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!--end of list-->
+    </nav>
+
+    <div class="header" id="aHeader">
+        <h2 class="aHeader-txt">ACCESS LOGS</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive-sm">
+                    <table id="ADdataTable" class="table table-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="min-mobile">Access Date</th>
+                                <th class="min-mobile">Access Time</th>
+                                <th class="min-mobile">Action</th>
+                                <th class="min-mobile">Accessed By</th>
+                            </tr>
+                        </thead>
+                        <tbody>
     <?php
-    // $res = mysqli_query($mysqli, "SELECT * FROM `activity_log` WHERE activity_description='Login' OR activity_description='Logout'");
-    $res = mysqli_query($conn, "SELECT * FROM activity_log INNER JOIN admin ON activity_log.admin_id=admin.admin_id  WHERE activity_description='Login' OR activity_description='Logout'"); //query and join activity log and admin
+    $res = mysqli_query($conn, "SELECT * FROM activity_log INNER JOIN admin ON activity_log.admin_id=admin.admin_id  WHERE activity_description='Login' OR activity_description='Logout' ORDER BY activity_log_id DESC"); //query and join activity log and admin
      while($result = mysqli_fetch_array($res)){
          echo "<tr>";
-         echo "<td>"."<center>".$result['activity_log_id']."</center>"."</td>";
-         echo "<td>"."<center>".$result['firstname']." ".$result['lastname']."</center>"."</td>";
+       //  echo "<td>"."<center>".$result['activity_log_id']."</center>"."</td>";
+         echo "<td>"."<center>".$result['activity_date']."</center>"."</td>"; 
+         echo "<td>"."<center>".date( 'g:i A', strtotime($result['activity_time']))."</center>"."</td>";
          echo "<td>"."<center>".$result['activity_description']."</center>"."</td>";
-         echo "<td>"."<center>".$result['act_date']."</center>"."</td>"; 
-         echo "<td>"."<center>".date( 'g:i A', strtotime($result['act_time']))."</center>"."</td>";
+         echo "<td>"."<center>".$result['admin_fname']." ".$result['admin_lname']."</center>"."</td>";
+         echo "</tr>";
      }
-    ?>
-    </tbody>
-     </table>
-    <a href="AdminDashboard.php">Go to Dashboard</a> <!-- page1-->
-    <a href="Logout.php">Log Out</a> <!-- logout through href-->
-    <form action="" method="POST"><input type="submit" name="logOutbutton" value="Log Out"> </form> <!-- logout through button-->
+     ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <!-- footer -->
+    <div class="footer">
+        <p class="footer-txt">BS COMPUTER SCIENCE 3A © 2021</p>
+    </div>
+
+    <script>
+        $('.icon').click(function () {
+            $('span').toggleClass("cancel");
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            $('#ADdataTable').DataTable({
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true
+            });
+        
+        });
+    </script> -->
+    <!-- <script>
+        $(document).ready(function () {
+            var table = $('#ADdataTable').DataTable({
+                responsive: true
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            $('#ADdataTable').DataTable();
+        });
+    </script>
 </body>
 
-    </html>
+</html>
 
     <?php
 }else{
