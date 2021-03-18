@@ -3,7 +3,6 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  font-family: Roboto,Roboto Condensed,Generica, sans-serif;
   list-style: none;  
 }
 body{  
@@ -13,6 +12,7 @@ body{
   font-size: 100%;
   background-attachment: fixed;
   width: auto;
+  min-height: 100%;
 }
 nav{
   background: #f8f8f8;
@@ -20,6 +20,9 @@ nav{
               0 3px 6px rgba(0, 0, 0, .23);
   width: auto;
   z-index: 3;
+}
+nav:before{
+  min-height: 100%;
 }
 nav:after{
   content: '';
@@ -44,7 +47,7 @@ nav h3{
   letter-spacing: 6px;
   font-family: Generica regular, sans-serif;
 }
-nav .logo{
+nav .Alogo{
   float: left;
   position: relative;
   line-height: 80px;
@@ -115,7 +118,7 @@ nav ul ul li{
 nav ul ul li a{
   line-height: 50px;
 }
-nav ul ul li a.elec-text{
+nav ul ul li a.Aelec-text{
   font-size: 1.2em;
 }
 nav ul ul li .logout::before {
@@ -179,8 +182,13 @@ nav ul ul ul li{
   top: -60px;
   left: 150px;
 }
-.show,.icon,input{
+.Ashow,.Aicon,input{
   display: none;
+}
+nav img.Auser-profile{
+  margin-top: 0;
+  height: 40px;
+  width: 40px;
 }
 /* .fa-plus{
   font-size: 15px;
@@ -198,7 +206,7 @@ nav ul ul ul li{
     width: auto;
     float: left;
   } */
-  .show + a, ul{
+  .Ashow + a, ul{
     display: none;
   }
   nav ul li,nav ul ul li{
@@ -209,7 +217,8 @@ nav ul ul ul li{
   nav ul li a:hover{
     box-shadow: none;
   }
-  .show{
+
+  .Ashow{
     display: block;
     background-color: #18566e;
     color: white;
@@ -218,10 +227,10 @@ nav ul ul ul li{
     line-height: 70px;
     cursor: pointer;
   }
-  .show:hover{
+  .Ashow:hover{
     color:white;
   }
-  .icon{
+  .Aicon{
     display: block;
     color:  black;
     position: absolute;
@@ -264,16 +273,7 @@ nav ul ul ul li{
   }
   
 }
-header{
-  font-size: 35px;
-  font-weight: 600;
-  padding: 10px 0;
-}
-p{
-  font-size: 30px;
-  font-weight: 500;
-  font-family: Generica regular, sans-serif;
-}
+
 article p{
   font-family: Roboto regular, sans-serif;
   color: #124254;
@@ -308,14 +308,14 @@ article {
   padding: 10px;
 }
 /*For logos on top of welcome banner*/
-img.logos{
+img.Alogos{
   float: left;
   padding-left: 10px;
   height: 90px;
   width: 100px;
   margin-bottom: 2em;
 }
-.logo-container{
+.Alogo-container{
   position:relative;
   /* float: left; */
   display: -webkit-flex;
@@ -326,40 +326,22 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .container {
+  body, section, .Acontainer {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
 }
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height:5%;
-  padding: 5px 0px;
-  background-color: #fece4b;
-  text-align: center;
-}
-div p.footer-txt{
-  position: relative;
-  top: .5em;
-  font-family: Roboto Regular, sans-serif;
-  letter-spacing: 7px;
-  font-size: 1em;
-  color: black;
-}
-nav img.user-profile{
-  margin-top: 0;
-  height: 40px;
-  width: 40px;
-}
+
+
+
+
+
 /*countdown*/
-.container {
+aside{
   color: #333;
-  float: right;
+  float: left;
   text-align: center;
-  margin-right: 50px;
+  margin-left: 50px;
   top: 50px;
   bottom: 0;
   position: relative;
@@ -394,14 +376,34 @@ div li span {
   font-size: 4.5rem;
 
 }
-#content {
-  display: flex;
-  padding: 1rem;
-  position: relative;
-}
-div p.elec-guide-txt{
+aside p.Aelec-guide-txt{
   font-family: Roboto Regular, sans-serif;
   text-align: justify;
   font-size: 1.6em;
   margin-top: 3em;
+}
+
+
+
+#aside-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+#section-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 12%;
+}
+
+
+footer{
+  background-color: #fece4b;
+  position: relative;
+  height: 5%;
+  margin-top: auto;
+  clear: both;
+  text-align: center;
+  padding: 5px 0px;
+  letter-spacing: 7px;
 }

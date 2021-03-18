@@ -6,4 +6,4 @@ include "db_conn.php";
 session_unset();
 session_destroy();
 
-header("Location: ..\Login UI v2\html\AdminLogin.php");
+header("Location: ..\Login UI v2\html\StudentLogin.php");
