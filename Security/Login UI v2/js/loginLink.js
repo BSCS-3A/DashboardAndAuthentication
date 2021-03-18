@@ -1,3 +1,3 @@
 function handleSelect(elm) { 
-	window.location = elm.value+".php"; 
+	window.location = elm.value+".html"; 
 }
