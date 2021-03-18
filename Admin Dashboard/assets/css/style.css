@@ -215,7 +215,6 @@ nav ul ul ul li{
   nav ul li,nav ul ul li{
     display: block;
     width: 100%;
-    font-size: 3vw;
   }
   nav ul li a:hover{
     box-shadow: none;
@@ -329,16 +328,23 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section {
+  body, section, .aContainer, .ADcountdown, .aCD-contents {
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-  .aContainer, .ADcountdown, .aCD-contents{
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
+  .aContainer{
+    width: 100% !important;
+    font-size: small;
+  }
+  .ADcountdown{
+    font-size: auto;
+  }
+  .aCD-contents{
+    display: block;
+    font-size: auto;
   }
 }
+
 .footer {
   position: fixed;
   left: 0;
@@ -364,27 +370,27 @@ nav img.user-profile{
   width: 40px;
 }
 /*countdown*/
-.aContainer {
+/*countdown*/
+aside{
   color: #333;
-  float: right;
+  float: left;
   text-align: center;
-  margin: 80px 50px 50px;
+  margin-left: 50px;
+  top: 50px;
+  bottom: 0;
   position: relative;
-  max-width: 35%;
-  overflow: auto;
+  max-width: 500px;
+
 }
-#aHeadline {
+div h1 {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
-  font-size: 2.5em;
-  letter-spacing: 1.6px;
+  font-size: 4em;
   color: black;
   margin-bottom: .8em;
-  margin-top: 0;
-  width: auto;
 }
-ul.aCD-contents{
+div ul{
   /* max-width: 90%; */
   border: 1px solid #ffc423;
   border-width: 3px;
@@ -393,24 +399,29 @@ ul.aCD-contents{
 }
 div li {
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.5em;
   list-style-type: none;
-  padding: 5%;
+  padding: 1em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 div li span {
   display: block;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
+
 }
-p.elec-guide-txt{
+aside p.Aelec-guide-txt{
   font-family: Roboto Regular, sans-serif;
   text-align: justify;
-  font-size: 1em;
-  margin-top: 1em;
-  margin-bottom: 0;
-  float: right;
+  font-size: 1.6em;
+  margin-top: 3em;
 }
+#aside-container{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
 /*Datatable*/
 div.container {
   background-color:#dddddd;
@@ -475,6 +486,6 @@ h2.aHeader-txt{
   margin-top: .5%;
   margin-bottom: .5%;
 }
-/* .row{
-  overflow-x: auto; 
-} */
+.row{
+  margin: 0;
+}
