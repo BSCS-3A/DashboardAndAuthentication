@@ -13,6 +13,7 @@ body{
   font-size: 100%;
   background-attachment: fixed;
   width: auto;
+  min-height: 100%;
 }
 nav{
   background: #1d6986;
@@ -20,7 +21,7 @@ nav{
               0 3px 6px rgba(0, 0, 0, .23);
   width: auto;
   z-index: 3;
-
+  display: flex;
 }
 nav:after{
   content: '';
@@ -59,14 +60,12 @@ div.aLogo{
   position: relative;
   line-height: 80px;
   margin-top: 14px;
-  margin-bottom: 4px;
   margin-left: 40px;
 }
 nav ul{
   float: right;
   padding: 0;
   height: 80px;
-  /* margin-right: 40px; */
   margin-bottom: 0;
   list-style: none;
   position: relative;
@@ -186,7 +185,7 @@ nav ul ul ul li{
   top: -60px;
   left: 150px;
 }
-.Ashow,.icon{
+.Ashow, .ADicon{
   display: none
 }
 
@@ -205,11 +204,11 @@ nav ul ul ul li{
     margin-left: 0px;
     float: left;
   }
-  /* nav .logo{
-    padding-left: 30px;
+  nav .aLogo{
+    margin-bottom: 3%;
     width: auto;
     float: left;
-  } */
+  }
   .Ashow + a, ul{
     display: none;
   }
@@ -232,7 +231,7 @@ nav ul ul ul li{
   .Ashow:hover{
     color:white;
   }
-  .icon{
+  .ADicon{
     display: block;
     color:#ffffff;
     position: absolute;
@@ -255,12 +254,12 @@ nav ul ul ul li{
   nav ul ul a{
     left: 0;
   }
-  nav ul ul ul a{
+  /* nav ul ul ul a{
     padding-left: 80px;
   }
   nav ul ul ul li{
     position: static;
-  }
+  } */
   [id^=btn]:checked + ul{
     width: 100%;
     left: 0;
@@ -275,6 +274,91 @@ nav ul ul ul li{
   }
   
 }
+/*for laptops*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+
+  nav ul li{ /*Accounts, Election, Candidates, etc*/
+    /* float: left; */
+    display: inline-block;
+    height: 80px;
+    background: #1d6986;
+    text-align: center;
+    width: 100px;
+  }
+  nav ul li a{
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    letter-spacing: 1px;
+    font-family: Roboto Light, sans-serif;
+  }
+  nav ul li a:visited {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  nav ul li a:hover{
+    color: #ffc423;
+    text-decoration: none;
+  }
+  nav ul li a:active{
+    text-decoration: none;
+  }
+  nav ul li:hover{
+    background-color: #124254;
+  }
+  nav ul li a:active {
+    color: green;
+  }
+  nav ul ul{ /*dropdown container*/
+    position: absolute;
+    top: 90px;
+    border-top: 3px solid #124254;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+  }
+  nav ul ul li{ /*dropdown list*/
+   height: 50px;
+   position: relative;
+   margin: 0px;
+   float: none;
+   display: list-item;
+  }
+  nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 100px;
+  }
+  nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul li{
+    background: #ffc423;
+    position: relative;
+    margin: 0px;
+    width: 100px;
+    font-size: 0.8em;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    z-index: 2;
+  }
+  nav ul ul li a{
+    line-height: 50px;
+    font-family: Roboto bold, sans-serif;
+  }
+  nav ul ul ul li{
+    position: relative;
+    font-size: 1em;
+    top: -60px;
+    left: 100px;
+  }
+}
+
 header{
   font-size: 35px;
   font-weight: 600;
