@@ -20,6 +20,7 @@ nav{
               0 3px 6px rgba(0, 0, 0, .23);
   width: auto;
   z-index: 3;
+
 }
 nav:after{
   content: '';
@@ -64,7 +65,7 @@ div.aLogo{
 nav ul{
   float: right;
   padding: 0;
-  height: 30%;
+  height: 80px;
   /* margin-right: 40px; */
   margin-bottom: 0;
   list-style: none;
@@ -75,7 +76,7 @@ nav ul{
 nav ul li{
   float: left;
   display: inline-block;
-  height: 80px;
+  height: 80px; /*80px ang dati*/
   background: #1d6986;
   text-align: center;
   /* margin: 0 5px; */
@@ -215,6 +216,7 @@ nav ul ul ul li{
   nav ul li,nav ul ul li{
     display: block;
     width: 100%;
+    font-size: 3vw;
   }
   nav ul li a:hover{
     box-shadow: none;
@@ -334,9 +336,14 @@ img.logos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .aContainer, .ADcountdown, .aCD-contents {
+  body, section {
     -webkit-flex-direction: column;
     flex-direction: column;
+  }
+  .aContainer, .ADcountdown, .aCD-contents{
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
   }
 }
 .footer {
@@ -371,6 +378,7 @@ nav img.user-profile{
   margin: 80px 50px 50px;
   position: relative;
   max-width: 35%;
+  overflow: auto;
 }
 #aHeadline {
   font-weight: normal;
