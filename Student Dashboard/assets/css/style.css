@@ -216,16 +216,21 @@ nav img.Auser-profile{
 
 /* Mobile */
 @media all and (max-width: 968px) {
+  body{
+    min-height: 100%;
+    overflow: auto;
+    padding-bottom: 5%;
+  }
   nav ul{
     margin-right: 0px;
     margin-left: 0px;
     float: left;
   }
-  /* nav .logo{
-    padding-left: 30px;
+  nav .Alogo{
+    margin-bottom: 10px;
     width: auto;
     float: left;
-  } */
+  }
   .Ashow + a, ul{
     display: none;
   }
@@ -237,7 +242,6 @@ nav img.Auser-profile{
   nav ul li a:hover{
     box-shadow: none;
   }
-
   .Ashow{
     display: block;
     background-color: #18566e;
@@ -246,6 +250,9 @@ nav img.Auser-profile{
     padding: 0 20px;
     line-height: 70px;
     cursor: pointer;
+    letter-spacing: 1px;
+    font-family: Roboto Light, sans-serif;
+    text-decoration: none;  
   }
   .Ashow:hover{
     color:white;
@@ -290,7 +297,10 @@ nav img.Auser-profile{
   }
   span.cancel:before{
     content: '\f00d';
-  } 
+  }
+  #Aside-container{
+    top: 0px;
+  }
 }
 
 
@@ -352,33 +362,42 @@ img.Alogos{
 } 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
-  body, section, .Acontainer {
+  body, section, #Aside-container #headline #countdown{
     -webkit-flex-direction: column;
     flex-direction: column;
   }
+  .countdown{
+    font-size: auto;
+  }
+  #c-contents{
+    display: block;
+    font-size: auto;
+  }
 }
+
 
 /*countdown*/
 aside{
   color: #333;
   float: left;
   text-align: center;
-  margin-left: 50px;
-  top: 50px;
-  bottom: 0;
+  margin-right: 30px;
+  margin-left: 30px;
+  top: 80px;
+  padding-bottom: 50px;
   position: relative;
   max-width: 500px;
-
+  float: right;
 }
-div h1 {
+#headline {
   font-weight: normal;
   letter-spacing: .125rem;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 3em;
   color: black;
   margin-bottom: .8em;
 }
-div ul{
+#c-contents{
   /* max-width: 90%; */
   border: 1px solid #ffc423;
   border-width: 3px;
@@ -387,24 +406,25 @@ div ul{
 }
 div li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.9em;
   list-style-type: none;
-  padding: 1em;
+  padding: 5%;
   text-transform: uppercase;
   color: black;
 }
 div li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
 
 }
 aside p.Aelec-guide-txt{
   font-family: Roboto Regular, sans-serif;
   text-align: justify;
-  font-size: 1.6em;
-  margin-top: 3em;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 0;
 }
-#aside-container{
+#Aside-container{
   min-height: 100%;
   overflow: auto;
   padding-bottom: 5%;
