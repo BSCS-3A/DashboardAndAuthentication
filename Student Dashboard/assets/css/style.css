@@ -26,9 +26,6 @@ nav{
   width: auto;
   z-index: 3;
 }
-nav:before{
-  min-height: 100%;
-}
 nav:after{
   content: '';
   clear: both;
@@ -226,6 +223,10 @@ nav img.Auser-profile{
     margin-left: 0px;
     float: left;
   }
+  nav ul li:hover{
+    box-shadow: none;
+    background: #18566e;
+  }
   nav .Alogo{
     margin-bottom: 10px;
     width: auto;
@@ -235,7 +236,7 @@ nav img.Auser-profile{
     display: none;
   }
   nav ul li,nav ul ul li{
-    border-top: 3px solid #18566e;
+    background: #18566e;
     display: block;
     width: 100%;
   }
@@ -244,7 +245,7 @@ nav img.Auser-profile{
   }
   .Ashow{
     display: block;
-    background-color: #18566e;
+    background: #18566e;
     color: white;
     font-size: 1.2em;
     padding: 0 20px;
