@@ -122,22 +122,22 @@ include("db_conn.php");
                         </thead>
                         <tbody>
                             <?php
-                            $res = mysqli_query($conn, "SELECT * FROM admin_activity_log INNER JOIN admin ON admin_activity_log.admin_id=admin.admin_id  WHERE activity_description='Login' OR activity_description='Logout'"); //query and join activity log and admin
+                            $res = mysqli_query($conn, "SELECT * FROM admin_activity_log INNER JOIN admin ON admin_activity_log.admin_id=admin.admin_id  WHERE activity_description='Login' OR activity_description='Logout' ORDER BY activity_log_id DESC"); //query and join activity log and admin
                              while($result = mysqli_fetch_array($res)){
                                  echo "<tr>";
-                                 echo "<td>"."<center>".date( 'm-d-Y', strtotime($result['activity_date']))."</center>"."</td>"; 
-                                 echo "<td>"."<center>".date( 'g:i:s A', strtotime($result['activity_time']))."</center>"."</td>";
-                                 echo "<td>"."<center>".$result['activity_description']."</center>"."</td>";
-                                 echo "<td>"."<center>".$result['admin_fname']." ".$result['admin_lname']." (ADMIN)"."</center>"."</td>";
+                                 echo "<td>".date( 'm-d-Y', strtotime($result['activity_date']))."</td>"; 
+                                 echo "<td>".$result['activity_time']."</td>";
+                                 echo "<td>".$result['activity_description']."</td>";
+                                 echo "<td>".$result['admin_fname']." ".$result['admin_lname']." (ADMIN)"."</td>";
                                  echo "</tr>";
                              }
-                             $res = mysqli_query($conn, "SELECT * FROM student_access_log INNER JOIN student ON student_access_log.student_id=student.student_id  WHERE activity_description='Login' OR activity_description='Logout'"); //query and join activity log and admin
+                             $res = mysqli_query($conn, "SELECT * FROM student_access_log INNER JOIN student ON student_access_log.student_id=student.student_id  WHERE activity_description='Login' OR activity_description='Logout'ORDER BY access_log_id DESC"); //query and join activity log and admin
                              while($result = mysqli_fetch_array($res)){
                                  echo "<tr>";
-                                 echo "<td>"."<center>".date( 'm-d-Y', strtotime($result['date']))."</center>"."</td>"; 
-                                 echo "<td>"."<center>".date( 'g:i:s A', strtotime($result['time']))."</center>"."</td>";
-                                 echo "<td>"."<center>".$result['activity_description']."</center>"."</td>";
-                                 echo "<td>"."<center>".$result['fname']." ".$result['lname']." (STUDENT)"."</center>"."</td>";
+                                 echo "<td>".date( 'm-d-Y', strtotime($result['date']))."</td>"; 
+                                 echo "<td>".$result['time']."</td>";
+                                 echo "<td>".$result['activity_description']."</td>";
+                                 echo "<td>".$result['fname']." ".$result['lname']." (STUDENT)"."</td>";
                                  echo "</tr>";
                              }
                              ?>
