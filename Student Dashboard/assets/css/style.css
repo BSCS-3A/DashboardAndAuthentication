@@ -4,9 +4,8 @@
   padding: 0;
   user-select: none;
   box-sizing: border-box;
-  list-style: none;  
+  list-style: none;
 }
-
 /* Body */
 body{  
   font-family: Roboto,Roboto Thin,Generica, sans-serif;  
@@ -17,6 +16,7 @@ body{
   width: auto;
   min-height: 100%;
 }
+
 
 /* Top Navigation */
 nav{
@@ -81,7 +81,7 @@ nav ul{
 }
 nav ul li{
   float: left;
-  display: inline-block;
+  display: block;
   height: 80px;
   background: #f8f8f8;
   text-align: center;
@@ -224,7 +224,7 @@ nav img.Auser-profile{
     float: left;
   }
   nav ul li:hover{
-    box-shadow: none;
+    color: black;
     background: #18566e;
   }
   nav .Alogo{
@@ -299,9 +299,6 @@ nav img.Auser-profile{
   span.cancel:before{
     content: '\f00d';
   }
-  #Aside-container{
-    top: 0px;
-  }
 }
 
 
@@ -331,11 +328,6 @@ section {
   margin-top: 100px;
   max-width: 800px;
   float: left;
-}
-#section-container{
-  min-height: 100%;
-  overflow: auto;
-  padding-bottom: 12%;
 }
 /* Style the content */
 article {
@@ -425,22 +417,39 @@ aside p.Aelec-guide-txt{
   margin-top: 1em;
   margin-bottom: 0;
 }
-#Aside-container{
-  min-height: 100%;
-  overflow: auto;
-  padding-bottom: 5%;
-}
+
 
 
 
 /* Footer */
-footer{
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: #fece4b;
+  text-align: center;
+  font-family: Roboto Regular, sans-serif;
+  letter-spacing: 7px;
+  font-size: 10px;
+}
+
+/*footer{  
   background-color: #fece4b;
   position: relative;
-  height: 5%;
   margin-top: auto;
   clear: both;
   text-align: center;
   padding: 5px 0px;
   letter-spacing: 7px;
-}
+}*/
+
+/*footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: #fff;
+  background-color: darkblue;
+  }*/
