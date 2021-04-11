@@ -28,7 +28,7 @@ if (time()-$_SESSION['timestamp']>$idletime){
     <script src="assets/js/dataTables.bootstrap4.min.js"></script>
     <script src="assets/js/jquery-3.5.1.js"></script>
     <script src="assets/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/countdown.js"></script>
+    <!--<script src="assets/js/countdown.js"></script>-->
     <script src="https://cdn.datatables.net/fixedheader/3.1.8/js/dataTables.fixedHeader.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>BUCEILS Voting System</title>
