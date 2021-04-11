@@ -131,7 +131,7 @@ include("db_conn.php");
                                  echo "<td>".$result['admin_fname']." ".$result['admin_lname']." (ADMIN)"."</td>";
                                  echo "</tr>";
                              }
-                             $res = mysqli_query($conn, "SELECT * FROM student_access_log INNER JOIN student ON student_access_log.student_id=student.student_id  WHERE activity_description='Login' OR activity_description='Logout'ORDER BY access_log_id DESC"); //query and join activity log and admin
+                             $res = mysqli_query($conn, "SELECT * FROM student_access_log INNER JOIN student ON student_access_log.student_id=student.student_id  WHERE activity_description='Login' OR activity_description='Logout'ORDER BY date DESC"); //query and join activity log and admin
                              while($result = mysqli_fetch_array($res)){
                                  echo "<tr>";
                                  echo "<td>".date( 'm-d-Y', strtotime($result['date']))."</td>"; 
