@@ -254,13 +254,19 @@ var i = setInterval(function() {
     
   // If the count down is over, write some text 
   if ( distEnd < 0) {
-               
-                $.post("../php/backFun_resetDBtable_v0_1.php",
-                function(data,statuss){
+               let headline = document.getElementById("AD-CD-headline"),
+                    countdown = document.getElementById("ADcountdown"),
+                    content = document.getElementById("AD-CD-contents");
+      
+                headline.innerText = "The election period has ended!";
+                countdown.style.display = "none";
+   
+               // $.post("../php/backFun_resetDBtable_v0_1.php",
+                //function(data,statuss){
                   //alert("Message sent with status" + status);
                   //location.reload(true);
                   
-                });
+               // });
                 clearInterval(i);
         }
                 
