@@ -184,8 +184,8 @@ var x = setInterval(function() {
 
   // If the count down is over, write some text 
   if (distance < 0) {
-   let headline = document.getElementById("AD-CD-headline");
-    headline.innerText = "Time before election ends";
+   let headlines = document.getElementById("AD-CD-headline");
+    headlines.innerText = "Time before election ends";
    //delete the data in vote_event table in database after election ends
 $(document).ready(function(){
  var dend = "<?php echo $endate ?>"; 
