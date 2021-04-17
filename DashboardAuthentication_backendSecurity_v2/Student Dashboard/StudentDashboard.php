@@ -115,11 +115,101 @@ if (time()-$_SESSION['timestamp']>$idletime){
         BS COMPUTER SCIENCE 3A © 2021
     </footer>
     <!--End of Footer-->
+	 <?php 
+       $db = mysqli_connect('localhost', 'root', '', 'adminman');
+       $event = mysqli_query($db, "SELECT * FROM vote_event WHERE vote_event_id = 1");
+  
+       while ($row = mysqli_fetch_array($event)) { 
+        $stdate = $row['start_date'];
+        $endate = $row['end_date'];
+       }
+       ?>
 
     <script>
         $('.icon').click(function () {
             $('span').toggleClass("cancel");
         });
+	    
+	var start ="<?php echo $stdate ?>"; 
+
+	// Set the date we're counting down to
+	var countDownStart = new Date(start).getTime();
+
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+  	// Get today's date and time
+  	var now = new Date().getTime();
+    
+  	// Find the distance between now and the count down date
+  	var distance = countDownStart - now;
+
+    
+ 	// Time calculations for days, hours, minutes and seconds
+  	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  	// Output the result in an element with id="demo"
+ 
+  	document.getElementById("days").innerHTML = days;
+  	document.getElementById("hours").innerHTML = hours;
+  	document.getElementById("minutes").innerHTML = minutes;
+  	document.getElementById("seconds").innerHTML =seconds;
+
+  	// If the count down is over, write some text 
+  	if (distance < 0) {
+   		let headlines = document.getElementById("headline");
+    		headlines.innerText = "Time before election ends";
+		
+   	//delete the data in vote_event table in database after election ends
+	$(document).ready(function(){
+ 	var dend = "<?php echo $endate ?>"; 
+	// Set the date we're counting down to
+ 	var cdEnd = new Date(dend).getTime();
+
+	// Update the count down every 1 second
+ 	var i = setInterval(function() {
+
+  	// Get today's date and time
+  	var nowww = new Date().getTime();
+    
+  	// Find the distance between now and the count down date
+
+  	var distEnd = cdEnd - nowww;
+  	var d = Math.floor(distEnd / (1000 * 60 * 60 * 24));
+  	var h = Math.floor((distEnd % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var m = Math.floor((distEnd % (1000 * 60 * 60)) / (1000 * 60));
+  	var s = Math.floor((distEnd % (1000 * 60)) / 1000);
+
+  	// Output the result in an element with id="demo"
+ 
+  	document.getElementById("days").innerHTML = d;
+  	document.getElementById("hours").innerHTML = h;
+  	document.getElementById("minutes").innerHTML = m;
+  	document.getElementById("seconds").innerHTML =s;
+    
+  	// If the count down is over, write some text 
+  	if ( distEnd < 0) {
+               let headline = document.getElementById("headline"),
+                    countdown = document.getElementById("countdown");
+      
+                headline.innerText = "The election period has ended!";
+                countdown.style.display = "none";
+   
+                clearInterval(i);
+        }
+                
+},1000);
+});
+               
+                clearInterval(x);
+              }
+
+},1000);
+	    
     </script>
 </body>
 
